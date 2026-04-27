@@ -1,0 +1,33 @@
+
+
+  /* ----- desktop only */
+  @media only screen and (min-width: 992px) {
+
+    [data-hide="d"] { display: none; }
+  }
+
+
+  /* ----- tablet */
+  @media only screen and (max-width: 991px) {
+  
+    [data-hide="t"] { display: none; }
+  }
+
+  /* ----- mobile landscape */
+  @media screen and (max-width: 767px) {
+
+    [data-hide="ml"] { display: none; }
+  }
+
+  /* ----- mobile */
+  @media screen and (max-width: 497px) {
+
+    [data-hide="m"] { display: none; }
+  }
+
+  /* ----- truncation 
+
+  @media screen and (min-width:1920px) {
+  body {font-size: 1.111111111111111rem;}
+  }
+  */

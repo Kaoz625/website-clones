@@ -1,0 +1,282 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+img, video { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+/* ── CSS Variables ── */
+:root {
+  /* Colors */
+  --c-bg:        #080808;
+  --c-surface:   #111111;
+  --c-border:    #222222;
+  --c-text:      #f0ede8;
+  --c-muted:     #777777;
+  --c-accent:    #e8c87a;   /* gold */
+  --c-accent2:   #a07cf0;   /* violet */
+  --c-danger:    #e05c5c;
+
+  /* Design system colors */
+  --cinemaflow:  #e8c87a;
+  --cinery:      #a07cf0;
+  --cinemax:     #5ce0b8;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --sp-xs: 0.5rem;
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 4rem;
+  --sp-xl: 8rem;
+
+  /* Transitions */
+  --tr-fast:   150ms ease;
+  --tr-base:   300ms ease;
+  --tr-slow:   600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --max-w: 1280px;
+  --nav-h: 72px;
+}
+
+/* ── Base ── */
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+h1 { font-size: clamp(3rem, 8vw, 7rem); }
+h2 { font-size: clamp(2rem, 5vw, 4rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
+h4 { font-size: 1.25rem; }
+
+p { max-width: 65ch; }
+p.wide { max-width: 85ch; }
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+/* ── Layout ── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+}
+
+.section {
+  padding-block: var(--sp-xl);
+}
+
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+  background: linear-gradient(to bottom, rgba(8,8,8,0.95), transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav__logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--c-accent);
+  flex: 1;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--sp-md);
+  list-style: none;
+}
+
+.nav__links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  transition: color var(--tr-fast);
+}
+
+.nav__links a:hover,
+.nav__links a.active { color: var(--c-text); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all var(--tr-base);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--c-accent);
+  color: #000;
+  font-weight: 600;
+}
+.btn--primary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(232,200,122,0.3);
+}
+
+.btn--ghost {
+  border: 1px solid var(--c-border);
+  color: var(--c-text);
+}
+.btn--ghost:hover {
+  border-color: var(--c-text);
+  background: rgba(255,255,255,0.04);
+}
+
+.btn--sm {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.7rem;
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color var(--tr-base), transform var(--tr-base);
+}
+.card:hover {
+  border-color: var(--c-accent);
+  transform: translateY(-4px);
+}
+
+/* ── Progress bar ── */
+.progress-bar {
+  width: 100%;
+  height: 2px;
+  background: var(--c-border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.progress-bar__fill {
+  height: 100%;
+  background: var(--c-accent);
+  transition: width var(--tr-slow);
+}
+
+/* ── Badge ── */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.badge--gold   { background: rgba(232,200,122,0.15); color: var(--c-accent); border: 1px solid rgba(232,200,122,0.3); }
+.badge--violet { background: rgba(160,124,240,0.15); color: var(--c-accent2); border: 1px solid rgba(160,124,240,0.3); }
+.badge--teal   { background: rgba(92,224,184,0.15); color: var(--cinemax); border: 1px solid rgba(92,224,184,0.3); }
+
+/* ── Divider ── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--c-border);
+  margin-block: var(--sp-lg);
+}
+
+/* ── Overlay / Lightbox ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--tr-base);
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.overlay__close {
+  position: absolute;
+  top: 2rem; right: 2rem;
+  font-size: 2rem;
+  color: var(--c-muted);
+  cursor: pointer;
+  line-height: 1;
+  transition: color var(--tr-fast);
+}
+.overlay__close:hover { color: var(--c-text); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--c-bg); }
+::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--c-muted); }
+
+/* ── Selection ── */
+::selection { background: rgba(232,200,122,0.25); color: var(--c-text); }
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fade-up  { animation: fadeUp 0.8s var(--tr-slow) both; }
+.fade-in  { animation: fadeIn 0.6s ease both; }
+
+/* ── Design color accents ── */
+[data-design="cinemaflow"] { --accent: var(--cinemaflow); }
+[data-design="cinery"]     { --accent: var(--cinery); }
+[data-design="cinemax"]    { --accent: var(--cinemax); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+}

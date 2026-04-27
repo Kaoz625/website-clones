@@ -1,0 +1,148 @@
+{
+  "target": "https://www.starbucks.com",
+  "scanned_at": "2026-04-27T16-34-03-492Z",
+  "pages_crawled": 100,
+  "candidates_tested": 17,
+  "findings": [
+    {
+      "original_url": "https://www.starbucks.com/account/signin?returnUrl=%2Frewards%2Fmy-rewards%2F#content",
+      "param": "returnUrl",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/account/signin?returnUrl=https%3A%2F%2Fevil-redirect-canary.com#content",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-returnUrl-2026-04-27T16-33-52-614Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?next=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "next",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?next=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-next-2026-04-27T16-33-52-996Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?url=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "url",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?url=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-url-2026-04-27T16-33-53-831Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?redirect=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "redirect",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?redirect=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-redirect-2026-04-27T16-33-54-626Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?return=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "return",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?return=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-return-2026-04-27T16-33-55-431Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?goto=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "goto",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?goto=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-goto-2026-04-27T16-33-56-135Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?redir=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "redir",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?redir=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-redir-2026-04-27T16-33-56-630Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?destination=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "destination",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?destination=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-destination-2026-04-27T16-33-56-997Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?callback=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "callback",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?callback=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-callback-2026-04-27T16-33-57-419Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?continue=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "continue",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?continue=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-continue-2026-04-27T16-33-57-875Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?returnUrl=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "returnUrl",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?returnUrl=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-returnUrl-2026-04-27T16-33-59-169Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?returnTo=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "returnTo",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?returnTo=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-returnTo-2026-04-27T16-34-00-602Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?back=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "back",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?back=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-back-2026-04-27T16-34-00-975Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?forward=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "forward",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?forward=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-forward-2026-04-27T16-34-01-826Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?target=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "target",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?target=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-target-2026-04-27T16-34-02-552Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?href=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "href",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?href=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-href-2026-04-27T16-34-02-982Z.png"
+    },
+    {
+      "original_url": "https://www.starbucks.com/?link=https%3A%2F%2Fevil-redirect-canary.com",
+      "param": "link",
+      "payload": "https://evil-redirect-canary.com",
+      "redirected_to": "https://www.starbucks.com/?link=https%3A%2F%2Fevil-redirect-canary.com",
+      "confirmed": true,
+      "screenshot": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/screenshots/bugbounty/www_starbucks_com-redirect-link-2026-04-27T16-34-03-430Z.png"
+    }
+  ],
+  "summary": {
+    "total_findings": 17,
+    "confirmed": 17
+  }
+}

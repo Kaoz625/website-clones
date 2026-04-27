@@ -1,0 +1,97 @@
+
+  /* --------------------------------------- HELMET SECTION */
+
+  .on-t-hero-stats-ui-box1-layout {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67d86a1dced2fe748052517c_on-t-hero-stats-ui-box1-fill-c.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  .calendar-track-mask {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67d9a2eb367e13f117c827e5_ln-calendar-track-mask.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  @media only screen and (min-width: 992px) {
+    .f1-highlight-grid:not(.is-history):hover .f1-highlight-grid-line {
+      display: none;
+    }
+    .f1-highlight-grid:hover .calendar-row-head-line {
+      display: none;
+    }
+
+    .f1-highlight-grid:not(.is-history):hover .text-on-t-stat-label-sm {
+      color: inherit;
+    }
+    .f1-highlight-grid:not(.is-history):hover .f1-highlight-item-round-w {
+      color: var(--color--black);
+    }
+
+    .f1-highlight-grid:hover .f1-highlight-round-svg {
+      color: var(--color--grey-off-track) !important;
+    }
+  }
+  .calendar-rich-text p {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -0.0125rem;
+  }
+  .calendar-rich-text p strong {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.0125rem;
+    color: var(--color--lime-off);
+  }
+
+  .calendar-dropdown-item.is-open .calendar-dropdown-trigger {
+    background: var(--color--lime);
+    color: var(--color--black);
+  }
+  @media only screen and (min-width: 992px) {
+    .calendar-dropdown-item:hover .calendar-dropdown-chevron {
+      color: var(--color--black);
+    }
+  }
+  .calendar-dropdown-item.is-open .calendar-dropdown-chevron {
+    color: var(--color--black);
+    transform: rotate(0deg);
+  }
+  @media only screen and (min-width: 992px) {
+    .calendar-dropdown-item.is-open .calendar-dropdown-trigger .image.is-trophy,
+    .f1-highlight-grid:not(.is-history):hover .image.is-trophy,
+    .f1-highlight-grid.is-highlights:hover .image.is-trophy {
+      filter: invert(100%) grayscale(100%);
+    }
+  }
+
+  .calendar-dropdown-item.is-open .calendar-row-head-line {
+    display: none;
+  }
+
+  .calendar-track-title-layout .cal-target-wrapper {
+    display: flex;
+  }
+
+

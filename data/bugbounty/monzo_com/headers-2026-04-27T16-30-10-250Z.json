@@ -1,0 +1,62 @@
+{
+  "target": "https://monzo.com",
+  "scanned_at": "2026-04-27T16-30-10-250Z",
+  "final_url": "https://monzo.com/",
+  "status_code": 200,
+  "findings": [
+    {
+      "header": "content-security-policy",
+      "status": "weak",
+      "value": "block-all-mixed-content; base-uri 'none'; connect-src 'self' https://api.monzo.com https://internal-api.monzo.com https://api.tools.s101.nonprod-ffs.io https://static-assets.monzo.com https://static-assets.monzo-s101.com https://monzo-prod-s3bucketcreator-ffs-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-ffs-nonprod-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-qr-challenge.s3.eu-west-1.amazonaws.com https://monzo-prod-qr-challenge.s3.eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-bereavement-files.s3.eu-west-1.amazonaws.com https://monzo-prod-s3bucketcreator-bereavement-files.s3.eu-west-1.amazonaws.com https://api.s101.nonprod-ffs.io https://sentry.io https://*.ingest.sentry.io https://*.ingest.us.sentry.io bat.bing.com bat.bing.net https://assets.ctfassets.net https://a.storyblok.com https://www.facebook.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://adservice.google.com https://www.googleadservices.com/pagead/ https://ad.doubleclick.net https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://*.googlesyndication.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.google.com https://*.google.co.uk https://google.com https://api.greenhouse.io https://cdn.linkedin.oribi.io https://px.ads.linkedin.com https://px4.ads.linkedin.com https://client.prod.mplat-ppcprotect.com https://click.prod.mplat-ppcprotect.com https://pclick.prod.mplat-ppcprotect.com https://www.lunio.ai https://tr.snapchat.com https://tr-shadow.snapchat.com https://tr6.snapchat.com https://evnt.byspotify.com https://pixels.spotify.com/v1/ https://analytics.tiktok.com https://widget.trustpilot.com; font-src 'self' https://static-assets.monzo.com https://static-assets.monzo-s101.com https://monzo-prod-s3bucketcreator-ffs-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-ffs-nonprod-web-export.s3-eu-west-1.amazonaws.com https://fonts.gstatic.com; frame-ancestors https://app.contentful.com https://app.storyblok.com; frame-src https://capture.navattic.com https://community.monzo.com https://www.facebook.com https://connect.facebook.net https://www.google.com https://bid.g.doubleclick.net https://*.doubleclick.net https://www.googletagmanager.com https://fls.doubleclick.net https://tr.snapchat.com https://tr-shadow.snapchat.com bytedance: sslocal: https://widget.trustpilot.com https://platform.twitter.com https://player.vimeo.com https://www.youtube.com www.youtube-nocookie.com; img-src 'self' data: https://api.monzo.com https://internal-api.monzo.com https://api.tools.s101.nonprod-ffs.io https://public-images.monzo.com/ https://static-assets.monzo.com https://static-assets.monzo-s101.com https://monzo-prod-s3bucketcreator-ffs-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-ffs-nonprod-web-export.s3-eu-west-1.amazonaws.com https://images.ctfassets.net https://monzo.com https://monzo-prod-user-images.imgix.net https://monzo-nonprod-user-images.imgix.net https://api.s101.nonprod-ffs.io https://public-images.monzo.com https://monzo.com/static/images/ https://www.monzo.com/static/images/ https://bat.bing.com/action/0 https://bat.bing.net/action/0 https://images.contentful.com/ https://a.storyblok.com https://tracking.audio.thisisdax.com https://www.facebook.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.google.com https://www.google.co.uk https://ad.doubleclick.net https://*.google-analytics.com https://ssl.gstatic.com https://www.gstatic.com https://*.googletagmanager.com https://*.googlesyndication.com https://*.analytics.google.com https://*.g.doubleclick.net https://*.google.com https://*.google.co.uk https://px.ads.linkedin.com https://px4.ads.linkedin.com https://www.linkedin.com/px/li_sync https://www.googleadservices.com https://sc-static.net https://analytics.tiktok.com https://i.ytimg.com; manifest-src 'self'; object-src 'none'; script-src 'self' https://internal-api.monzo.com https://static-assets.monzo.com https://static-assets.monzo-s101.com https://monzo-prod-s3bucketcreator-ffs-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-ffs-nonprod-web-export.s3-eu-west-1.amazonaws.com  'nonce-115dce22b0bd504899c45f0dd76a0dad7f46' 'strict-dynamic' https://community.monzo.com https://api.s101.nonprod-ffs.io bat.bing.com/bat.js bat.bing.com/p/conversions/t/343187213 bat.bing.com/p/conversions/s/0.8.45 bat.bing.com/p/action/343187213.js https://connect.facebook.net https://staticxx.facebook.com https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11481969694/ https://www.google-analytics.com https://pagead2.googlesyndication.com/pagead/conversion/11481969694/ https://www.googleadservices.com/pagead/conversion/11481969694/ https://pagead2.googlesyndication.com/pagead/conversion/329248391/ https://www.googleadservices.com/pagead/conversion/329248391/ https://tagmanager.google.com https://www.googletagmanager.com https://api.greenhouse.io https://snap.licdn.com https://sc-static.net https://tr.snapchat.com/ https://pixel.byspotify.com https://analytics.tiktok.com https://widget.trustpilot.com https://platform.twitter.com https://www.youtube.com/iframe_api https://www.youtube.com/s/player/; style-src 'self' https://static-assets.monzo.com https://static-assets.monzo-s101.com https://monzo-prod-s3bucketcreator-ffs-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-ffs-nonprod-web-export.s3-eu-west-1.amazonaws.com 'unsafe-inline' https://tagmanager.google.com https://fonts.googleapis.com; upgrade-insecure-requests; media-src 'self' https://static-assets.monzo.com https://static-assets.monzo-s101.com https://monzo-prod-s3bucketcreator-ffs-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-ffs-nonprod-web-export.s3-eu-west-1.amazonaws.com https://www.monzo.com/static/images/ https://monzo.com/static/images/ https://www.monzo.com/static/images/blog/ https://monzo.com/static/images/blog/ https://videos.ctfassets.net https://videos.contentful.com https://a.storyblok.com; worker-src 'none'; report-uri https://o23827.ingest.sentry.io/api/4505743602483200/security/?sentry_key=06894583d63658ed47fe4e9943f497fa&sentry_environment=production&sentry_release=8cfa23c146427845b5bb08c158c0c6a396d13156; default-src https://static-assets.monzo.com https://static-assets.monzo-s101.com https://monzo-prod-s3bucketcreator-ffs-web-export.s3-eu-west-1.amazonaws.com https://monzo-s101-s3bucketcreator-ffs-nonprod-web-export.s3-eu-west-1.amazonaws.com;",
+      "description": "Prevents XSS and data injection attacks",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "strict-transport-security",
+      "status": "present",
+      "value": "max-age=31536000; includeSubDomains; preload",
+      "description": "Enforces HTTPS connections",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "x-frame-options",
+      "status": "present",
+      "value": "DENY",
+      "description": "Prevents clickjacking (or use CSP frame-ancestors)",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "x-content-type-options",
+      "status": "present",
+      "value": "nosniff",
+      "description": "Prevents MIME-type sniffing",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "referrer-policy",
+      "status": "present",
+      "value": "no-referrer",
+      "description": "Controls referrer information leakage",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "permissions-policy",
+      "status": "present",
+      "value": "accelerometer=(), ambient-light-sensor=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(self), picture-in-picture=(), speaker=(self), usb=(), vibrate=(), vr=()",
+      "description": "Restricts access to browser features",
+      "severity": "low",
+      "bounty_eligible": false
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "missing": 0,
+    "weak": 1,
+    "bounty_eligible": 0
+  }
+}

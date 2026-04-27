@@ -1,0 +1,81 @@
+
+  /* --------------------------------------- HELMET SECTION */
+
+  [data-mask-case-left] {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67dc3bc1e532f9b3f9fa140a_ln4-off-track-mask-case-left.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  [data-mask-case-right] {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67dc3bc10751fc4431f3f2de_ln4-off-track-mask-case-right.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  [data-mask-callout-left] {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67dc3bc14c14c40132cd0e39_ln4-off-track-mask-callout-right.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  [data-mask-callout-right] {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67dc3bc14a8d101c9c8ef1b5_ln4-off-track-mask-callout-left.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  .wf-design-mode .off-t-hero-scroll-meda-w .text-body-sm-mona {
+    visibility: visible !important;
+    display: block !important;
+  }
+  .wf-design-mode .off-t-hero-scroll-meda-w {
+    visibility: visible !important;
+    display: flex !important;
+  }
+  
+  .camp-list .camp-item:last-child {
+  	padding-bottom: calc(var(--gap) * 2);
+  }
+  
+

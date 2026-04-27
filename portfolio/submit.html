@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Selections — DesignSelect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .submit-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 3rem;
+      padding-top: calc(var(--nav-h) + var(--sp-lg));
+      padding-bottom: var(--sp-xl);
+      align-items: start;
+    }
+
+    /* ── Form ── */
+    .form-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 4px;
+      padding: 2.5rem;
+    }
+
+    .form-card__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-card__sub {
+      color: var(--c-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .field-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    .field label {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: 2px;
+      padding: 0.75rem 1rem;
+      color: var(--c-text);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      transition: border-color var(--tr-fast);
+      outline: none;
+      width: 100%;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--c-accent);
+      box-shadow: 0 0 0 1px rgba(232,200,122,0.2);
+    }
+
+    .field textarea { resize: vertical; min-height: 120px; }
+
+    .field select option { background: var(--c-surface); }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 0.9rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .form-note {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: var(--c-muted);
+      text-align: center;
+    }
+
+    /* ── Summary Sidebar ── */
+    .summary-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 2rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .summary-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 4px;
+      padding: 1.5rem;
+    }
+
+    .summary-card__title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--c-border);
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--c-border);
+      font-size: 0.82rem;
+    }
+    .summary-row:last-child { border-bottom: none; }
+    .summary-row__label { color: var(--c-muted); text-transform: capitalize; }
+    .summary-row__value { color: var(--c-accent); font-size: 0.78rem; }
+
+    .summary-empty {
+      font-size: 0.82rem;
+      color: var(--c-muted);
+      font-style: italic;
+    }
+
+    /* ── Confirmation ── */
+    .confirmation {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 60vh;
+      gap: var(--sp-md);
+    }
+    .confirmation.active { display: flex; }
+
+    .confirmation__icon {
+      font-size: 4rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .confirmation__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 300;
+      color: var(--c-accent);
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .confirmation__desc {
+      color: var(--c-muted);
+      max-width: 48ch;
+      text-align: center;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .confirmation__next {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    @media (max-width: 768px) {
+      .submit-layout { grid-template-columns: 1fr; }
+      .summary-sidebar { position: static; }
+      .field-group { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DesignSelect</a>
+    <ul class="nav__links">
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="preview.html">Preview</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main form view -->
+  <div id="form-view">
+    <div class="container">
+      <div class="submit-layout">
+        <!-- Form -->
+        <div class="form-card">
+          <h1 class="form-card__title">Let's make it<br><em style="font-style:italic;color:var(--c-accent)">real</em></h1>
+          <p class="form-card__sub">Send us your selections and we'll reach out within 24 hours with a full proposal.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="field-group">
+              <div class="field">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
+              </div>
+              <div class="field">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="business">Business Name</label>
+              <input type="text" id="business" name="business_name" placeholder="Acme Creative Co." required>
+            </div>
+
+            <div class="field-group">
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@acme.com" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry">
+                <option value="">Select your industry…</option>
+                <option>Professional Services (Law, Finance, Consulting)</option>
+                <option>Creative & Media</option>
+                <option>Restaurant & Food</option>
+                <option>Health & Wellness</option>
+                <option>Retail & E-commerce</option>
+                <option>Real Estate</option>
+                <option>Technology</option>
+                <option>Non-Profit</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="timeline">Desired Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">When do you need this?</option>
+                <option>ASAP (within 2 weeks)</option>
+                <option>1 month</option>
+                <option>2–3 months</option>
+                <option>Flexible / just exploring</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" placeholder="Tell us anything else about your project — existing site, logo assets, specific goals…"></textarea>
+            </div>
+
+            <!-- Hidden fields populated by JS -->
+            <input type="hidden" id="hidden-design" name="selected_design">
+            <input type="hidden" id="hidden-elements" name="element_selections">
+            <input type="hidden" id="hidden-quiz" name="quiz_result">
+
+            <button type="submit" class="btn btn--primary form-submit-btn">Send My Selections →</button>
+            <p class="form-note">No commitment required. We'll reply within 24 hours with a full proposal.</p>
+          </form>
+        </div>
+
+        <!-- Summary sidebar -->
+        <aside class="summary-sidebar">
+          <div class="summary-card">
+            <div class="summary-card__title">Your Design Summary</div>
+            <div id="summary-design">
+              <p class="summary-empty">Complete the quiz to see your match</p>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-card__title">Section Selections</div>
+            <div id="summary-selections">
+              <p class="summary-empty">No sections selected yet</p>
+            </div>
+          </div>
+
+          <div style="padding:1.25rem;border:1px solid var(--c-border);border-radius:4px;font-size:0.82rem;color:var(--c-muted)">
+            <div style="display:flex;gap:0.5rem;margin-bottom:0.5rem">
+              <span style="color:var(--c-accent)">✦</span>
+              <strong style="color:var(--c-text)">What happens next</strong>
+            </div>
+            <ol style="padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem">
+              <li>We review your selections</li>
+              <li>We send a detailed proposal</li>
+              <li>We schedule a kickoff call</li>
+              <li>We build your site</li>
+            </ol>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation view -->
+  <div id="confirmation-view" class="container">
+    <div class="confirmation" id="confirmation">
+      <div class="confirmation__icon">✦</div>
+      <h1 class="confirmation__title">You're all set!</h1>
+      <p class="confirmation__desc">We've received your design selections and will be in touch within 24 hours with a full proposal and next steps.</p>
+      <div class="confirmation__next">
+        <a href="preview.html" class="btn btn--ghost">← View your preview</a>
+        <a href="index.html" class="btn btn--primary">Back to home</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { getState, resetState } from './js/state.js';
+
+    const DESIGN_NAMES = { cinemaflow: 'Cinemaflow', cinery: 'Cinery', cinemax: 'Cinemax' };
+    const SECTION_LABELS = { nav: 'Navigation', hero: 'Hero', services: 'Services', gallery: 'Gallery', contact: 'Contact', footer: 'Footer' };
+
+    function populateSummary() {
+      const state = getState();
+      const base = state.designProfile?.baseDesign;
+      const selections = state.elementSelections || {};
+
+      const designEl = document.getElementById('summary-design');
+      if (base && DESIGN_NAMES[base]) {
+        designEl.innerHTML = `
+          <div class="summary-row">
+            <span class="summary-row__label">Base design</span>
+            <span class="summary-row__value">${DESIGN_NAMES[base]}</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-row__label">Quiz result</span>
+            <span class="summary-row__value">${DESIGN_NAMES[base]}</span>
+          </div>`;
+      }
+
+      const selectionsEl = document.getElementById('summary-selections');
+      const filled = Object.entries(selections).filter(([,v]) => v);
+      if (filled.length) {
+        selectionsEl.innerHTML = filled.map(([section, design]) => `
+          <div class="summary-row">
+            <span class="summary-row__label">${SECTION_LABELS[section] || section}</span>
+            <span class="summary-row__value">${DESIGN_NAMES[design] || design}</span>
+          </div>`).join('');
+      }
+
+      // Populate hidden fields
+      document.getElementById('hidden-design').value = base || '';
+      document.getElementById('hidden-elements').value = JSON.stringify(selections);
+      document.getElementById('hidden-quiz').value = JSON.stringify(state.quizScore || {});
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.email.value.trim();
+      const firstName = form.first_name.value.trim();
+      const business = form.business_name.value.trim();
+
+      if (!email || !firstName || !business) {
+        const firstEmpty = !firstName
+          ? document.getElementById('first-name')
+          : !business
+            ? document.getElementById('business')
+            : document.getElementById('email');
+        firstEmpty.focus();
+        firstEmpty.style.borderColor = 'var(--c-danger)';
+        setTimeout(() => firstEmpty.style.borderColor = '', 2000);
+        return;
+      }
+
+      // In production: POST to Netlify Forms, Formspree, or your own endpoint
+      // For now, simulate success after a brief delay
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        document.getElementById('form-view').style.display = 'none';
+        document.getElementById('confirmation').classList.add('active');
+      }, 900);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      populateSummary();
+      document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+    });
+  </script>
+</body>
+</html>

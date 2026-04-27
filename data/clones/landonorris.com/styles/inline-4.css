@@ -1,0 +1,96 @@
+
+
+  :root {
+    /* Other variables */
+    --cubic-default: cubic-bezier(0.65, 0.05, 0, 1);
+    --duration-default: 0.75s;
+    --animation-default: var(--duration-default) var(--cubic-default);
+    --section-padding: calc(3.5rem + (var(--gap) * 2));
+    --container-padding: 2rem;
+    --nav-height: calc(3.75rem (var(--gap) * 2));
+  }
+
+  :root {
+    /* SCALING */
+    --min-width: 992px;      /* Width where scaling starts */
+    --max-width: 1920px;     /* Width where scaling stops */
+    --design-width: 1728;    /* Your design's reference width */
+    --design-unit: 16;			 /* body font-size in design - no px */
+    --scale-factor: 1;       /* Global scale adjustment (1 = 100%) */
+
+    /* Scaling calculations */
+    --fluid-container: clamp(var(--min-width), 100vw, var(--max-width));
+    --fluid-font: calc(var(--fluid-container) / var(--design-width) * var(--design-unit) * var(--scale-factor));
+  }
+
+  /* Tablet */
+  @media screen and (max-width: 991px) {
+    :root {
+      --min-width: 768px;    
+      --max-width: 991px;    
+      --design-width: 1728;  
+      --design-unit: 20;
+    }
+  }
+
+  /* Mobile Landscape */
+  @media screen and (max-width: 767px) {
+    :root {
+      --min-width: 480px;    
+      --max-width: 767px;
+    }
+  }
+
+  /* Mobile Portrait */
+  @media screen and (max-width: 479px) {
+    :root {
+      --min-width: 320px;    
+      --max-width: 479px;
+      --design-unit: 48;
+    }
+  }
+
+  html {
+    font-size: var(--fluid-font);
+    scroll-behavior: initial;
+  }
+
+  body {
+    min-height: 0vw;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  *:before,
+  *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+  [data-theme="dark"] {
+    background-color: var(--color--dark-green);
+    color: var(--color--white) ;
+  }
+
+  [data-theme="light"] .nav {
+    color: var(--color--black);
+  }
+
+  [data-theme="light"] .nav-brand path,
+  [data-theme="light"] .nav-ln4-svg path {
+    fill: currentColor;
+  }
+
+
+
+
+

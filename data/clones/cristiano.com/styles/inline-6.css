@@ -1,0 +1,192 @@
+
+			img[src*="bateaux-placeholder-full.png"] {
+    display: none !important;
+}
+img[src*="bateaux-placeholder.png"] {
+    display: none !important;
+}
+
+img[src*="bateaux-placeholder.png"] {
+    visibility: hidden !important;
+}
+
+img[src*="bateaux-placeholder.png"] {
+    opacity: 0 !important;
+}
+
+img[src*="bateaux-placeholder.png"] {
+    height: 0 !important;
+}
+
+img[src*="bateaux-placeholder.png"] {
+    width: 0 !important;
+}
+
+img[src*="bateaux-placeholder.png"] {
+    display: none !important;
+}
+
+img[src*="bateaux-placeholder.png"] {
+    display: none !important;
+}
+
+img[src*="bateaux-placeholder.png"] {
+    display: none !important;
+}
+.bt-page-header,
+.page-header,
+.bt-hero,
+.bt-title-wrap,
+.bt-featured-image,
+.bt-intro,
+.bt-breadcrumb-wrap {
+    display: none !important;
+}
+.page-header,
+.bt-page-header,
+.bt-hero,
+.bt-title-wrap,
+.bt-featured-image,
+.bt-intro,
+.bt-breadcrumb-wrap {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+header.bt-header,
+div.bt-header,
+section.bt-header {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+section.bt-section,
+div.bt-section,
+.bt-container {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.page-header,
+.bt-page-header,
+.bt-hero,
+.bt-title-wrap,
+.bt-featured-image,
+.bt-intro,
+.bt-breadcrumb-wrap {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.btx-content-wrapper,
+.btx-main-content,
+.btx-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+body.home .site-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.home .btx-content-wrapper {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.home .btx-content-wrapper > .btx-section {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* Center the site logo in the header */
+.bt-site-branding {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Ensure the logo image itself is centered */
+.bt-site-branding img {
+    display: block;
+    margin: 0 auto;
+}
+/* Force header items to center the logo */
+.bt-header .bt-container,
+.bt-header .bt-logo-area {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Center the logo image */
+.bt-site-branding img {
+    margin: 0 auto;
+}
+/* Center the logo in the Bateaux header */
+.bt-logo-area {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* Make sure the logo itself centers */
+.bt-site-branding,
+.bt-site-branding img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+/* Force the left header column (logo) to expand and center */
+.bt-header .bt-logo-area {
+    flex: 1 1 100% !important;
+    text-align: center !important;
+}
+
+/* Center the logo image */
+.bt-header .bt-logo-area img {
+    margin: 0 auto !important;
+}
+/* Force the logo column to take full width */
+.bt-header .bt-logo-area {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+}
+
+/* Center the logo inside it */
+.bt-header .bt-logo-area .bt-site-branding,
+.bt-header .bt-logo-area img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+/* Center the logo inside the Elementor Canvas page */
+.elementor-section:first-of-type .elementor-widget-image {
+    text-align: center !important;
+}
+
+.elementor-section:first-of-type .elementor-widget-image img {
+    margin: 0 auto !important;
+    display: block !important;
+}
+/* Center the entire first Elementor column */
+.elementor-section:first-of-type .elementor-column {
+    text-align: center !important;
+}
+
+/* Center the logo image */
+.elementor-section:first-of-type img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+/* Center the first Elementor section on the page */
+.elementor-section.elementor-top-section:first-of-type {
+    text-align: center !important;
+}
+/* Center the logo perfectly */ .bt-header .bt-logo-area { text-align: center !important; display: flex !important; justify-content: center !important; align-items: center !important; } /* Center the menu under the logo */ .bt-header .bt-nav, .bt-header .bt-nav ul { text-align: center !important; justify-content: center !important; } .bt-header .bt-nav ul { display: inline-flex !important; gap: 25px; /* adjust spacing between menu items */ }
+		

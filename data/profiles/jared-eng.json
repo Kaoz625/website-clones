@@ -1,0 +1,15 @@
+{
+  "name": "Jared Eng",
+  "platform": "securus",
+  "trigger_phrase": "Lyreos research",
+  "end_phrase": "for me",
+  "reply_char_limit": 19996,
+  "stamp_cost_per_message": 1,
+  "research_strategy": "perplexity_first",
+  "preferred_ai_sites": ["perplexity", "claude", "chatgpt"],
+  "max_web_sources": 5,
+  "continuation_gate_message": "I have {remaining} more part(s) of your research on '{query}'. Each message = 1 stamp ({remaining} more total). Reply 'send more' to receive Part {next}, or 'stop' to end here.",
+  "obsidian_note": "brain/work/contacts/jared-eng.md",
+  "supabase_contact_id": "jared-eng",
+  "notes": "Prison contact via Securus emessaging. Trigger phrase activates full research pipeline. Replies require stamp-gate approval for each part beyond Part 1."
+}

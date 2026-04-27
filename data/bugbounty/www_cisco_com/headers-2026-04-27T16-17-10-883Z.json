@@ -1,0 +1,60 @@
+{
+  "target": "https://www.cisco.com",
+  "scanned_at": "2026-04-27T16-17-10-882Z",
+  "final_url": "https://www.cisco.com/",
+  "status_code": 200,
+  "findings": [
+    {
+      "header": "content-security-policy",
+      "status": "weak",
+      "value": "upgrade-insecure-requests; frame-ancestors *.cisco.com *.jasper.com *.ciscospark.com *.ciscolive.com  http://cisco.lookbookhq.com https://cisco.lookbookhq.com testcisco.marketing.adobe.com cisco.marketing.adobe.com ciscosales.my.salesforce.com test.salesforce.com zedo.com hindustantimes.com economictimes.indiatimes.com *.webex.com *.cdw.com *.cdwg.com *.cdw.ca *.meraki-go.com http://ciscopartners.lookbookhq.com https://ciscopartners.lookbookhq.com ciscolearningsystem.com ciscocustomer.lookbookhq.com cisco.lookbookhq.com ccsmedia.com *.itquotes.ie dteonline.com ampito-cisco.com arkphire.com *.insight.com *.ccsmedia.com *.ebuyer.com *.lambda-tek.com *.storm-technologies.com *.vohkus.com *.bechtle.com *.rainfocus.com *.broadbandbuyer.com *.hardware.com shop.redpontem.com *.miro.com cisco.techdatavendors.be *.service-now.com *.thousandeyes.com *.duo.com duo.com *.umbrella.com *.pricespider.com *.mapbox.com  *.vercel.app cdnjs.cloudflare.com https://community.cisco.com/;",
+      "description": "Prevents XSS and data injection attacks",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "strict-transport-security",
+      "status": "present",
+      "value": "max-age=31536000",
+      "description": "Enforces HTTPS connections",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "x-frame-options",
+      "status": "present",
+      "value": "SAMEORIGIN",
+      "description": "Prevents clickjacking (or use CSP frame-ancestors)",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "x-content-type-options",
+      "status": "present",
+      "value": "nosniff",
+      "description": "Prevents MIME-type sniffing",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "referrer-policy",
+      "status": "missing",
+      "description": "Controls referrer information leakage",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "permissions-policy",
+      "status": "missing",
+      "description": "Restricts access to browser features",
+      "severity": "low",
+      "bounty_eligible": false
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "missing": 2,
+    "weak": 1,
+    "bounty_eligible": 0
+  }
+}

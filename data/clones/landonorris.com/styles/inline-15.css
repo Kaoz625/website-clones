@@ -1,0 +1,122 @@
+
+  /*  ----- edit mode ----- */
+  /*  ----- edit mode ----- */
+
+  /*
+  [data-edit]:not([data-edit="true"]) [remove-bg]{
+  background: transparent !important;
+  background-color: transparent !important;
+  }
+  */
+
+  .wf-design-mode [data-designmode-white] {
+    background-color: var(--color--white);
+  }
+  .wf-design-mode [data-rive-object] {
+    outline: 2px solid red;
+  }
+
+  .wf-design-mode .transition-w {
+    pointer-events: none;
+  }
+
+  [data-rive-placeholder] {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: none;
+    pointer-events: none;
+  }
+  .wf-design-mode [data-rive-placeholder] {
+    display: block;
+  }
+
+  .wf-design-mode .callout-socials-card-layout {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .wf-design-mode .callout-socials-card-w {
+    position: relative;
+  }
+
+
+  [data-edit="true"] .s.home-marquee {
+    position: relative;
+  }
+
+  [data-edit="true"] .horizontal-track,
+  [data-edit="true"] .horizontal-pin-sticky {
+    overflow: auto !important;
+  }
+
+  [data-edit="true"] .horizontal-track {
+    outline-color: var(--color--lime);
+    outline-offset: -1px;
+    outline-style: solid;
+    outline-width: 1px;
+  }
+
+  [data-edit="true"] [data-nav-theme-target] {
+    outline-color: blue;
+    outline-offset: -2px;
+    outline-style: solid;
+    outline-width: 3px;
+  }
+
+  [data-edit="true"] [data-sticky-hero] {
+    outline-color: blue;
+    outline-offset: -2px;
+    outline-style: solid;
+    outline-width: 3px;
+  }
+
+  [data-edit="true"] .utility__gl {
+    outline-color: blue;
+    outline-offset: -2px;
+    outline-style: solid;
+    outline-width: 3px;
+  }
+
+  [data-edit="true"] .marquee-gl-target-w {
+    outline-color: pink;
+    outline-offset: -2px;
+    outline-style: solid;
+    outline-width: 3px;
+  }
+
+  .c.is-off-t-hero-scroll-media {
+    display: none;
+  }
+  .wf-design-mode .c.is-off-t-hero-scroll-media {
+    display: block;
+  }
+
+  [data-edit="true"] .f1-highlight-mouse-over-w {
+    display: none;
+  }
+
+  [data-components="true"] .nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  [data-components="true"] .nav-menu-w {
+    position: relative;
+    display: flex;
+  }
+
+  .wf-design-mode .calendar-dropdown-content {
+    display: block;
+  }
+  
+  .wf-design-mode .touch-desc-inner {
+  	position: relative;
+    color: black;
+  }
+
+
+
+

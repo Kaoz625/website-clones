@@ -1,0 +1,8 @@
+
+        :root {
+            --ch-bg: #E9E9E9;
+        }
+        .c-sotd-new .users-credits__details li:nth-child(n+6){
+            display: none;
+        }
+    

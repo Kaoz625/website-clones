@@ -1,0 +1,126 @@
+
+  /* --------------------------------------- HELMET SECTION */
+
+  [data-helmet-item] {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67e2c781c4c953cd9e74eda5_ln4-2-helm-mask-fill.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  @media only screen and (max-width: 479px) {
+    [data-helmet-item] {
+      --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67eea130c0f25ef68ac8889e_ln4-helm-mob-refactor-lime-fill.svg');
+    }
+  }
+
+  .home-hero-next-race-w {
+    transition: clip-path var(--animation-default);
+  }
+
+  .helmet-grid-item-reveal-img {
+    transition: 
+      clip-path var(--animation-default),
+      transform var(--animation-default);
+  }
+
+  [data-helmet-item]:hover .helmet-grid-item-reveal-img {
+    clip-path: ellipse(100% 120% at 50% 0%);
+    transform: scale(1);
+  }
+
+  .helmet-grid-item-img-helmet {
+    transition: 
+      transform var(--animation-default);
+  }
+  .helmet-grid-item-w:hover .helmet-grid-item-img-helmet {
+    transform: scale(1.1);
+  }
+
+  .helmet-grid-frame.is-overlay,
+  .helmet-grid-extender-img.is-overlay {
+    transition: 
+      opacity var(--animation-default);
+  }
+
+  .helmet-grid-extender-img {
+    transition: 
+      color var(--animation-default);
+  }
+  .helmet-grid-item-w:hover .helmet-grid-extender-img {
+    color: var(--color--lime);
+  }
+
+  .helmet-grid-item-w:hover .helmet-grid-frame.is-overlay,
+  .helmet-grid-item-w:hover .helmet-grid-extender-img.is-overlay {
+    opacity: 1;
+  }
+
+  canvas[data-rive-object],
+  canvas[data-rive-primary] {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 1920px) {
+    .marquee-offest-w {
+      -webkit-mask-image: linear-gradient(
+        90deg,
+        hsla(0, 0%, 100%, 0),
+        white 7.5%,
+        white 92.5%,
+        hsla(0, 0%, 100%, 0)
+      );
+      mask-image: linear-gradient(
+        90deg,
+        hsla(0, 0%, 100%, 0),
+        white 7.5%,
+        white 92.5%,
+        hsla(0, 0%, 100%, 0)
+      );
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+  }
+
+  /* CSS Keyframe Animation */
+  @keyframes translateXLeft { 
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes translateXRight { 
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  [data-css-marquee-list="left"] {
+    animation: translateXLeft 30s linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+  }
+  [data-css-marquee-list="right"] {
+    animation: translateXRight 30s linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    justify-content: flex-end;
+  }
+
+  .c.home-hero {
+    min-height: 100vh !important;
+  }
+
+
+
+

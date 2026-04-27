@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "uivision": {
+      "command": "node",
+      "args": ["mcp-servers/uivision-mcp/dist/index.js"]
+    }
+  }
+}

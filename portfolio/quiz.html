@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Quiz — DesignSelect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DesignSelect</a>
+    <ul class="nav__links">
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="compare.html">Compare</a></li>
+    </ul>
+  </nav>
+
+  <div class="quiz-wrapper">
+    <!-- Quiz Header -->
+    <div class="quiz-header container">
+      <div class="quiz-header__meta">
+        <span class="quiz-step-label" id="step-label">1 / 5</span>
+        <span class="quiz-step-label">Style Quiz</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar__fill" id="progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Questions injected here by quiz.js -->
+    <div id="quiz-container"></div>
+
+    <!-- Nav buttons -->
+    <div class="quiz-nav container" id="quiz-footer">
+      <button class="btn btn--ghost" id="quiz-prev" style="opacity:0.3">← Back</button>
+      <span class="quiz-step-label" style="color:var(--c-muted);font-size:0.75rem">Select an option to continue</span>
+    </div>
+  </div>
+
+  <script type="module" src="js/quiz.js"></script>
+</body>
+</html>

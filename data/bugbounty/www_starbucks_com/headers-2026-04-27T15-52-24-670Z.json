@@ -1,0 +1,67 @@
+{
+  "target": "https://www.starbucks.com",
+  "scanned_at": "2026-04-27T15-52-24-669Z",
+  "final_url": "https://www.starbucks.com/",
+  "status_code": 200,
+  "findings": [
+    {
+      "header": "content-security-policy",
+      "status": "weak",
+      "value": "default-src 'self' *.starbucks.com *.starbucks.ca; child-src 'self' *.starbucks.com *.starbucks.ca *.doubleclick.net *.optimizely.com *.trustarc.com; connect-src 'self' *.starbucks.com *.starbucks.ca https://fonts.gstatic.com *.akamaihd.net *.akstat.io *.doubleclick.net *.go-mpulse.net *.google.com *.google-analytics.com *.googletagmanager.com *.googlevideo.com *.mparticle.com *.nr-data.net *.optimizely.com *.pinterest.com *.trustarc.com *.xg4ken.com; font-src 'self' *.starbucks.com *.starbucks.ca https://fonts.googleapis.com https://fonts.gstatic.com *.trustarc.com; img-src 'self' data: *.starbucks.com *.starbucks.ca https://*.gstatic.com *.adsrvr.org *.agkn.com *.akamaihd.net *.appcast.io *.bing.com *.doubleclick.net *.facebook.com *.ggpht.com *.google.com *.google-analytics.com *.googletagmanager.com *.mparticle.com *.nr-data.net *.pinterest.com *.snapchat.com *.trustarc.com *.truste.com *.videoamp.com *.xg4ken.com *.ytimg.com; manifest-src 'self' *.starbucks.com *.starbucks.ca; media-src 'self' blob: *.starbucks.com *.starbucks.ca *.youtube.com; frame-src 'self' *.googletagmanager.com *.optimizely.com *.trustarc.com *.youtube.com; frame-ancestors 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.starbucks.com *.starbucks.ca cdnjs.com *.appcast.io *.bing.com *.doubleclick.net *.facebook.net *.go-mpulse.net *.google.com *.google-analytics.com *.googletagmanager.com *.gstatic.com *.mparticle.com *.newrelic.com *.nr-data.net *.optimizely.com *.pinimg.com *.sc-static.net *.snapchat.com *.trustarc.com *.xg4ken.com; style-src 'self' 'unsafe-inline' *.starbucks.com *.starbucks.ca https://fonts.googleapis.com;",
+      "description": "Prevents XSS and data injection attacks",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "strict-transport-security",
+      "status": "present",
+      "value": "max-age=31536000; includeSubDomains; preload",
+      "description": "Enforces HTTPS connections",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "x-frame-options",
+      "status": "missing",
+      "description": "Prevents clickjacking (or use CSP frame-ancestors)",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "x-content-type-options",
+      "status": "present",
+      "value": "nosniff",
+      "description": "Prevents MIME-type sniffing",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "referrer-policy",
+      "status": "missing",
+      "description": "Controls referrer information leakage",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "permissions-policy",
+      "status": "missing",
+      "description": "Restricts access to browser features",
+      "severity": "low",
+      "bounty_eligible": false
+    },
+    {
+      "header": "x-powered-by",
+      "status": "weak",
+      "value": "cwa00",
+      "description": "X-Powered-By discloses technology stack",
+      "severity": "low",
+      "bounty_eligible": false
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "missing": 3,
+    "weak": 2,
+    "bounty_eligible": 0
+  }
+}

@@ -1,0 +1,181 @@
+
+
+  a {
+    color: inherit;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color--lime);
+    color: var(--color--black);
+    text-shadow: none;
+  }
+
+  ::-moz-selection {
+    background-color: var(--color--lime);
+    color: var(--color--black);
+    text-shadow: none;
+  }
+
+  /* Dark theme selection */
+  [data-theme="lime"] *::selection {
+    background-color: var(--color--black);
+    color: var(--color--lime);
+    text-shadow: none;
+  }
+  [data-theme="lime"] *::-moz-selection {
+    background-color: var(--color--black);
+    color: var(--color--lime);
+    text-shadow: none;
+  }
+
+  img::selection,
+  svg::selection {
+    background: transparent;
+  }
+
+
+  .display-none,
+  [display-none] {
+    display: none !important;
+  }
+
+  .visibility-hidden,
+  [visibility-hidden] {
+    visibility: hidden;
+  }
+
+  :where(svg) {
+    height: 100%;
+    width: 100%; 
+    max-width: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+
+  :where(:focus-visible) {
+    outline: 2px solid var(--color--lime);
+    outline-offset: 2px;
+  }
+
+  :where(button) {
+    background-color: transparent;
+  }
+
+  :where(
+  [screen-reader]:not(:focus, :active, :focus-within), 
+  .screen-reader:not(:focus, :active, :focus-within)) {
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .w-lightbox-close {
+    right: 5em;
+    height: 5em;
+    outline: transparent;
+  }
+
+  /* --------------------------------------- hide scrollbar */
+
+  body ::-webkit-scrollbar,
+  body::-webkit-scrollbar {display: none;} /* Chrome, Safari, Opera */
+  body {-ms-overflow-style: none;} /* IE & Edge */
+  html {scrollbar-width: none;} /* Firefox */
+
+
+  /* --------------------------------------- pointer events */
+  [pointer-none] {
+    pointer-events: none;
+    user-select: none;
+  }
+  [pointer-auto] {
+    pointer-events: auto;
+  }
+
+  /* --------------------------------------- clip */
+  [overflow-clip="x"] {
+    overflow-x: clip;
+  }
+  [overflow-clip="y"] {
+    overflow-y: clip;
+  }
+
+  /* --------------------------------------- text */
+
+  p,
+  .text-small,
+  .text-regular,
+  .text-medium,
+  .text-large,
+  .text-xlarge {
+    text-wrap: pretty /* ensures nice wrapping */
+  }
+
+  /* --------------------------------------- forms */
+
+  textarea {
+    resize: vertical;
+  }
+
+  *[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+    outline: 0.1em solid var(--color--primary);
+    outline-offset: 0.1em;
+  }
+
+
+  /* --------------------------------------- rich text */
+
+  .rich-text p, .rich-text ol, .rich-text li { 
+    /* line heights in rtf */
+    line-height: 1.6;
+  }
+  .rich-text strong {  
+    /* bolds in rtf */
+  }
+  .rich-text .w-embed {
+    /* embed spacing in rtf */
+  }
+  .rich-text a {
+    text-decoration: none;
+  }
+  .rich-text a:hover {
+    text-decoration: underline;
+  }
+
+  /* --------------------------------------- video */
+
+  [data-video-stream] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  [data-video-stream-wrap] .iframe-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+
+  [data-video-stream] iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+

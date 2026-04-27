@@ -1,0 +1,73 @@
+
+  [split-text]:not[data-oval-scroll] .line {
+    position: relative;
+    clip-path: polygon(0 -2%, 0 94%, 100% 94%, 100% -2%);
+    white-space: nowrap;
+  }
+
+  .btn-text {
+    --text-offset: var(--text--btn-primary);
+  }
+  .btn-text.is-footer  {
+    --text-offset: var(--text--btn-footer);
+  }
+  .btn-text.is-nav  {
+    --text-offset: var(--text--btn-nav);
+  }
+
+  [split-text].btn-text {
+    text-shadow: 0px var(--text-offset) currentColor
+  }
+
+  [data-anim-high] .line {
+    width: auto !important;
+    display: inline-block !important;
+  }
+
+  .text-eyebrow.flex .line {
+    display: flex !important;
+  }
+
+  [split-text] .char {
+    display: inline-block;
+  }
+
+  /*****
+  *************************** IMPACT TEXT
+  *****/
+
+  .impact-content-w.is-home .text-impact-lg-mona strong {
+    color: var(--color--lime-off);
+    font-family: Brier;
+    font-size: 8.25rem;
+    line-height: 83%;
+    letter-spacing: -0.1875rem;
+  }
+
+  .impact-content-w.on-track .text-impact-lg-mona strong {
+    color: var(--color--grey-on-track);
+    font-family: Brier;
+    font-size: 8.25rem;
+    line-height: 83%;
+    letter-spacing: -0.1875rem;
+  }
+
+  .impact-content-w.off-track .text-impact-lg-mona strong {
+    color: var(--color--green-off-white-2);
+    font-family: Brier;
+    font-size: 8.25rem;
+    line-height: 83%;
+    letter-spacing: -0.1875rem;
+  }
+
+
+  @media screen and (max-width: 991px) {
+    .impact-content-w .text-impact-lg-mona strong {
+      font-size: inherit !important;
+    }
+  }
+
+
+  [split-text] {
+    white-space: pre-line; /* Preserves line breaks */
+  }

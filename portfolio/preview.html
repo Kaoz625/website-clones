@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Design Preview — DesignSelect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/preview.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DesignSelect</a>
+    <ul class="nav__links">
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="submit.html" class="btn btn--primary btn--sm">Submit Selections</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="preview-hero-header">
+      <p class="label" style="margin-bottom:0.75rem">Live Preview</p>
+      <h1>Your site,<br><em style="font-style:italic;color:var(--c-accent)">assembled</em></h1>
+      <p style="color:var(--c-muted);margin-top:1rem;font-size:1.05rem">This is how your website will look based on your selections. Every section is from your chosen design.</p>
+    </div>
+
+    <div class="preview-layout" data-theme="cinemaflow">
+      <!-- Browser Frame + Canvas -->
+      <div>
+        <div class="browser-frame">
+          <div class="browser-frame__bar">
+            <div class="browser-frame__dots">
+              <div class="browser-frame__dot"></div>
+              <div class="browser-frame__dot"></div>
+              <div class="browser-frame__dot"></div>
+            </div>
+            <div class="browser-frame__url">yourbrand.com</div>
+          </div>
+          <div class="preview-canvas" id="preview-canvas"></div>
+        </div>
+
+        <!-- Action bar below frame -->
+        <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap">
+          <a href="submit.html" class="btn btn--primary">This is my design! →</a>
+          <a href="compare.html" class="btn btn--ghost">← Edit selections</a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="preview-sidebar">
+        <!-- Theme card -->
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">Your design profile</div>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:2rem">◆</span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:1.3rem;font-weight:300" id="sidebar-theme">Cinemaflow</div>
+              <div style="font-size:0.75rem;color:var(--c-muted)">Base design</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selections card -->
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">Section selections</div>
+          <div class="sidebar-selection-list" id="sidebar-selections"></div>
+        </div>
+
+        <!-- CTA card -->
+        <div class="sidebar-card" style="background:rgba(232,200,122,0.04);border-color:rgba(232,200,122,0.2)">
+          <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:300;margin-bottom:0.75rem;color:var(--c-accent)">Ready to build?</div>
+          <p style="font-size:0.82rem;color:var(--c-muted);margin-bottom:1.25rem;max-width:none">Submit your selections and we'll put together a full proposal with timeline and pricing.</p>
+          <a href="submit.html" class="btn btn--primary" style="width:100%;justify-content:center">Submit My Selections →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div style="height:var(--sp-xl)"></div>
+
+  <script type="module" src="js/preview.js"></script>
+</body>
+</html>

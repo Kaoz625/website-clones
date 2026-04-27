@@ -1,0 +1,32 @@
+
+  /* iphone / safari styles */
+
+  .is-safari {
+  }
+  .is-iphone {
+  }
+  @media only screen and (max-width: 479px) {
+    .is-safari .footer-layout-clip {
+      aspect-ratio: 382.94/627.49;
+    }
+    .is-iphone .footer-layout-clip {
+      aspect-ratio: 382.94/627.49;
+    }
+  }
+  .is-safari .footer-marquee-svg,
+  .is-iphone .footer-marquee-svg {
+    width: 6rem;
+  }
+  .is-safari .home-collab-marquee-svg,
+  .is-iphone .home-collab-marquee-svg {
+    width: 9rem;
+  }
+  .is-safari .marquee-spacer,
+  .is-iphone .marquee-spacer {
+    width: 5rem;
+  }
+
+  .is-safari .nav-brand {
+    width: 8.2rem;
+  }
+

@@ -1,0 +1,163 @@
+{
+  "clonedFrom": "https://travisscott.com/",
+  "hostname": "travisscott.com",
+  "clonedAt": "2026-04-27T16:30:29.409Z",
+  "page": {
+    "title": "TRAVIS SCOTT",
+    "description": "The Official Travis Scott website and store. Music, Video, Tour, Shop"
+  },
+  "designTokens": {
+    "cssCustomProperties": {
+      "--background": "0,0,0",
+      "--text": "255,255,255",
+      "--swiper-theme-color": "#007aff",
+      "--kl-reviews-color-light-gray": "#e9e9eb"
+    },
+    "fontStack": [
+      "__news_d29d29, __news_Fallback_d29d29"
+    ],
+    "colorPalette": [
+      "rgb(255, 255, 255)",
+      "rgb(0, 0, 0)",
+      "rgba(217, 217, 217, 0.04)",
+      "rgba(217, 217, 217, 0.05)"
+    ],
+    "fontFaceDeclarations": [
+      "@font-face { font-family: swiper-icons; src: url(\"data:application/font-woff;charset=utf-8;base64, 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\"); font-weight: 400; font-style: normal; }",
+      "@font-face { font-family: __dotMatrix_7a5249; src: url(\"/_next/static/media/f285473b6528290f-s.p.woff2\") format(\"woff2\"); font-display: swap; }",
+      "@font-face { font-family: __dotMatrix_Fallback_7a5249; src: local(\"Arial\"); ascent-override: 69.23%; descent-override: 19.35%; line-gap-override: 0%; size-adjust: 156.72%; }",
+      "@font-face { font-family: __news_d29d29; src: url(\"/_next/static/media/319106fc0ef68340-s.p.woff2\") format(\"woff2\"); font-display: swap; }",
+      "@font-face { font-family: __news_Fallback_d29d29; src: local(\"Arial\"); ascent-override: 124.25%; descent-override: 28.83%; line-gap-override: 0%; size-adjust: 79.78%; }",
+      "@font-face { font-family: __jj_cf6c5e; src: url(\"/_next/static/media/58669a86ab0dd2ed-s.p.woff2\") format(\"woff2\"); font-display: swap; }",
+      "@font-face { font-family: __jj_Fallback_cf6c5e; src: local(\"Arial\"); ascent-override: 96.27%; descent-override: 26.89%; line-gap-override: 0%; size-adjust: 97.43%; }",
+      "@font-face { font-family: __basquiat_b57b5c; src: url(\"/_next/static/media/35429fc30e2f6915-s.p.woff2\") format(\"woff2\"); font-display: swap; }",
+      "@font-face { font-family: __basquiat_Fallback_b57b5c; src: local(\"Arial\"); ascent-override: 95%; descent-override: 25%; line-gap-override: 0%; size-adjust: 100%; }"
+    ],
+    "keyframeAnimations": [
+      "@keyframes fadeIn { \n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}",
+      "@keyframes fadeOut { \n  0% { opacity: 1; }\n  100% { opacity: 0; }\n}",
+      "@keyframes load { \n  0% { box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 30px inset; transform: scale(0); }\n  5% { transform: scale(0.2); }\n  100% { box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 1px inset; transform: scale(1); }\n}",
+      "@keyframes logoLoad { \n  0% { transform: scale(0); opacity: 0.33; }\n  44% { opacity: 0.33; }\n  100% { opacity: 1; transform: scale(1); }\n}",
+      "@keyframes rotate { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}",
+      "@keyframes spin { \n  0% { opacity: 0; transform: rotate(0deg); }\n  50% { opacity: 1; }\n  100% { transform: rotate(1turn); opacity: 0; }\n}",
+      "@keyframes bouncy { \n  0%, 100% { transform: translateY(2px); }\n  50% { transform: translateY(-2px); }\n}",
+      "@keyframes shake { \n  41%, 8% { transform: translateX(-10px); }\n  25%, 58% { transform: translateX(10px); }\n  75% { transform: translateX(-5px); }\n  92% { transform: translateX(5px); }\n  0%, 100% { transform: translateX(0px); }\n}",
+      "@keyframes swiper-preloader-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}",
+      "@keyframes klaviyo-fadein { \n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}",
+      "@keyframes klaviyo-fadeout { \n  0% { opacity: 1; }\n  100% { opacity: 0; }\n}",
+      "@keyframes klaviyo-slideinleft { \n  0% { transform: translate3d(-100%, 0px, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-slideinright { \n  0% { transform: translate3d(100%, 0px, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-slideinup { \n  0% { transform: translate3d(0px, -100%, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-slideindown { \n  0% { transform: translate3d(0px, 100%, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-fadeinup { \n  0% { opacity: 0; transform: translate3d(0px, 10%, 0px); visibility: visible; }\n  100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-slideintopleft { \n  0% { transform: translate3d(-100%, -100%, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-slideintopright { \n  0% { transform: translate3d(100%, -100%, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-slideinbottomright { \n  0% { transform: translate3d(100%, 100%, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-slideinbottomleft { \n  0% { transform: translate3d(-100%, 100%, 0px); visibility: visible; }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}",
+      "@keyframes klaviyo-spinner { \n  100% { transform: rotate(360deg); }\n}",
+      "@keyframes klaviyo-flash { \n  0%, 50%, 100% { opacity: 1; }\n  25%, 75% { opacity: 0; }\n}",
+      "@keyframes klaviyo-heartbeat { \n  0% { transform: scale(1); }\n  14% { transform: scale(1.3); }\n  28% { transform: scale(1); }\n  42% { transform: scale(1.3); }\n  70% { transform: scale(1); }\n}",
+      "@keyframes klaviyo-pulse { \n  0% { transform: scale3d(1, 1, 1); }\n  50% { transform: scale3d(1.1, 1.1, 1.1); }\n  100% { transform: scale3d(1, 1, 1); }\n}",
+      "@keyframes klaviyo-flipTop { \n  0% { transform: rotateX(0deg); z-index: 2; }\n  0%, 99% { opacity: 0.99; }\n  100% { transform: rotateX(-90deg); opacity: 0; }\n}",
+      "@keyframes klaviyo-flipBottom { \n  0%, 50% { z-index: -1; transform: rotateX(90deg); opacity: 0; }\n  51% { opacity: 0.99; }\n  100% { opacity: 0.99; transform: rotateX(0deg); z-index: 5; }\n}",
+      "@keyframes kl_reviews__list_loading__spinner { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}",
+      "@keyframes fadein { \n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}"
+    ]
+  },
+  "assets": {
+    "downloadedCount": 8,
+    "linkedStylesheets": 2,
+    "inlineStyleBlocks": 2,
+    "files": {
+      "https://www.travisscott.com/_next/static/css/f46c299e0917d278.css": "styles/sheet-0.css",
+      "https://static-tracking.klaviyo.com/onsite/js/build-preview/commit-d5c887c57486b456577a3ed12ac2cd5d746724fe/532.d799b8635a540140e839.css": "styles/sheet-1.css",
+      "https://www.travisscott.com/_next/static/media/319106fc0ef68340-s.p.woff2": "assets/1777307421837-319106fc0ef68340-s.p.woff2",
+      "https://www.travisscott.com/_next/static/media/35429fc30e2f6915-s.p.woff2": "assets/1777307421987-35429fc30e2f6915-s.p.woff2",
+      "https://www.travisscott.com/_next/static/media/f285473b6528290f-s.p.woff2": "assets/1777307422133-f285473b6528290f-s.p.woff2",
+      "https://www.travisscott.com/_next/static/media/58669a86ab0dd2ed-s.p.woff2": "assets/1777307422185-58669a86ab0dd2ed-s.p.woff2",
+      "https://cdn.sanity.io/images/vfp8z5al/production/480c9668f009a1fc60d0398cce19991b52f11ff6-1000x1000.jpg?q=75&fit=clip&auto=format": "assets/1777307422273-480c9668f009a1fc60d0398cce19991b52f11ff6-1000x1000.jpg",
+      "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.4/flags/4x3/us.svg": "assets/1777307422486-us.svg"
+    }
+  },
+  "semanticElements": [
+    {
+      "tag": "h3",
+      "text": "CJ1 T-REXX \"GREEN SPARK\"",
+      "role": "",
+      "classes": "js-shuffle"
+    },
+    {
+      "tag": "a",
+      "text": "Tour",
+      "role": "",
+      "classes": "button fixed top-[24px] left-[15px] sm:top-[30px] sm:left-[30px] z-[13] ttf-fast"
+    },
+    {
+      "tag": "a",
+      "text": "Shop",
+      "role": "",
+      "classes": "button fixed top-[24px] right-[15px] sm:top-[30px] sm:right-[30px] z-[13] ttf-fast"
+    },
+    {
+      "tag": "a",
+      "text": "Shop",
+      "role": "",
+      "classes": "button large"
+    },
+    {
+      "tag": "a",
+      "text": "TOUR",
+      "role": "",
+      "classes": "button large"
+    },
+    {
+      "tag": "a",
+      "text": "Utopia World",
+      "role": "",
+      "classes": "button large"
+    },
+    {
+      "tag": "a",
+      "text": "Utopia Album",
+      "role": "",
+      "classes": "button large"
+    },
+    {
+      "tag": "a",
+      "text": "terms",
+      "role": "",
+      "classes": "sm:hover:opacity-50 ttf duration-100 underline"
+    },
+    {
+      "tag": "a",
+      "text": "CJ1 T-REXX \"GREEN SPARK\"",
+      "role": "",
+      "classes": "w-full"
+    },
+    {
+      "tag": "button",
+      "text": "EMAIL",
+      "role": "",
+      "classes": "button large bare js-email"
+    },
+    {
+      "tag": "button",
+      "text": "TEXT",
+      "role": "",
+      "classes": "button large bare js-sms"
+    },
+    {
+      "tag": "nav",
+      "text": "ShopTOURUtopia WorldUtopia AlbumEMAILTEXT",
+      "role": "",
+      "classes": "ttf duration-[444ms] w-full flex justify-center"
+    }
+  ],
+  "screenshots": {
+    "viewport": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/travisscott.com/screenshots/viewport.png",
+    "fullPage": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/travisscott.com/screenshots/full-page.png",
+    "sections": [
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/travisscott.com/screenshots/section-0.png"
+    ]
+  }
+}

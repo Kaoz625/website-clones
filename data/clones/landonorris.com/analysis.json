@@ -1,0 +1,545 @@
+{
+  "clonedFrom": "https://landonorris.com/",
+  "hostname": "landonorris.com",
+  "clonedAt": "2026-04-26T22:42:31.345Z",
+  "page": {
+    "title": "2025 McLaren Formula 1 Driver — Lando Norris",
+    "description": "Official hub for British racing star Lando Norris: breaking news, 2025 race wins, exclusive merch, videos and behind-the-scenes access."
+  },
+  "designTokens": {
+    "cssCustomProperties": {
+      "--color--dark-green": "#282c20",
+      "--color--white": "#f4f4ed",
+      "--padding--container": "1.25rem",
+      "--gap": "1.25rem",
+      "--on-t-nav-spacer": "5.375rem",
+      "--color--black": "#111112",
+      "--text--h1": "4rem",
+      "--padding--xlarge": "5rem",
+      "--padding--med": "3rem",
+      "--color--lime-off": "#b2c73a",
+      "--color--lime": "#d2ff00",
+      "--color--green-off-white-1": "#dde1d2",
+      "--color--lime-zero": "#d2ff0000",
+      "--text--btn-primary": "1rem",
+      "--text--btn-nav": "1.25rem",
+      "--text--btn-footer": "1.875rem",
+      "--color--green-off-white-2": "#b4b8a5",
+      "--color--dark-green-tint-2": "#535450",
+      "--color--grey-on-track": "#b9bbad",
+      "--text--impact": "7.9375rem",
+      "--grid-spacer": "31.51vh",
+      "--color--dark-green-tint-1": "#3b3c38",
+      "--padding--small": "2rem",
+      "--color--grey-1": "#ebeee0",
+      "--color--green-light": "#ebeee0",
+      "--text--h2": "4.5rem",
+      "--text--h3": "2rem",
+      "--text--h4": "1.5rem",
+      "--text--h5": "1.2rem",
+      "--text--h6": "1rem",
+      "--padding--mini": "1rem",
+      "--padding--large": "4rem",
+      "--radius--small": "1rem",
+      "--radius--med": "3rem",
+      "--radius--large": "6.25rem",
+      "--vh": "1vh",
+      "--max-vh": "100vh",
+      "--grid-col": "25.4375rem",
+      "--oval-side-offset": "3rem",
+      "--poduim-offset": "-17.5rem",
+      "--text--reg": "1.6rem",
+      "--text--med": "2.76rem",
+      "--text--btn-tertiary": ".875px",
+      "--text--eyebrow": ".578125rem",
+      "--color--cream": "#efefe5",
+      "--color--grey-2": "#c8cbbd",
+      "--color--orange": "#ff6b00",
+      "--cubic-default": "cubic-bezier(0.65, 0.05, 0, 1)",
+      "--duration-default": "0.75s",
+      "--animation-default": "var(--duration-default) var(--cubic-default)",
+      "--section-padding": "calc(3.5rem + (var(--gap) * 2))",
+      "--container-padding": "2rem",
+      "--nav-height": "calc(3.75rem (var(--gap) * 2))",
+      "--min-width": "992px",
+      "--max-width": "1920px",
+      "--design-width": "1728",
+      "--design-unit": "16",
+      "--scale-factor": "1",
+      "--fluid-container": "clamp(var(--min-width), 100vw, var(--max-width))",
+      "--fluid-font": "calc(var(--fluid-container) / var(--design-width) * var(--design-unit) * var(--scale-factor))"
+    },
+    "fontStack": [
+      "\"Mona Sans Variable\", Arial, sans-serif"
+    ],
+    "colorPalette": [
+      "rgb(244, 244, 237)",
+      "rgb(40, 44, 32)",
+      "rgb(17, 17, 18)"
+    ],
+    "fontFaceDeclarations": [
+      "@font-face { font-family: webflow-icons; src: url(\"data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBiUAAAC8AAAAYGNtYXDpP+a4AAABHAAAAFxnYXNwAAAAEAAAAXgAAAAIZ2x5ZmhS2XEAAAGAAAADHGhlYWQTFw3HAAAEnAAAADZoaGVhCXYFgQAABNQAAAAkaG10eCe4A1oAAAT4AAAAMGxvY2EDtALGAAAFKAAAABptYXhwABAAPgAABUQAAAAgbmFtZSoCsMsAAAVkAAABznBvc3QAAwAAAAAHNAAAACAAAwP4AZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpAwPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAQAAAAAwACAACAAQAAQAg5gPpA//9//8AAAAAACDmAOkA//3//wAB/+MaBBcIAAMAAQAAAAAAAAAAAAAAAAABAAH//wAPAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEBIAAAAyADgAAFAAAJAQcJARcDIP5AQAGA/oBAAcABwED+gP6AQAABAOAAAALgA4AABQAAEwEXCQEH4AHAQP6AAYBAAcABwED+gP6AQAAAAwDAAOADQALAAA8AHwAvAAABISIGHQEUFjMhMjY9ATQmByEiBh0BFBYzITI2PQE0JgchIgYdARQWMyEyNj0BNCYDIP3ADRMTDQJADRMTDf3ADRMTDQJADRMTDf3ADRMTDQJADRMTAsATDSANExMNIA0TwBMNIA0TEw0gDRPAEw0gDRMTDSANEwAAAAABAJ0AtAOBApUABQAACQIHCQEDJP7r/upcAXEBcgKU/usBFVz+fAGEAAAAAAL//f+9BAMDwwAEAAkAABcBJwEXAwE3AQdpA5ps/GZsbAOabPxmbEMDmmz8ZmwDmvxmbAOabAAAAgAA/8AEAAPAAB0AOwAABSInLgEnJjU0Nz4BNzYzMTIXHgEXFhUUBw4BBwYjNTI3PgE3NjU0Jy4BJyYjMSIHDgEHBhUUFx4BFxYzAgBqXV6LKCgoKIteXWpqXV6LKCgoKIteXWpVSktvICEhIG9LSlVVSktvICEhIG9LSlVAKCiLXl1qal1eiygoKCiLXl1qal1eiygoZiEgb0tKVVVKS28gISEgb0tKVVVKS28gIQABAAABwAIAA8AAEgAAEzQ3PgE3NjMxFSIHDgEHBhUxIwAoKIteXWpVSktvICFmAcBqXV6LKChmISBvS0pVAAAAAgAA/8AFtgPAADIAOgAAARYXHgEXFhUUBw4BBwYHIxUhIicuAScmNTQ3PgE3NjMxOAExNDc+ATc2MzIXHgEXFhcVATMJATMVMzUEjD83NlAXFxYXTjU1PQL8kz01Nk8XFxcXTzY1PSIjd1BQWlJJSXInJw3+mdv+2/7c25MCUQYcHFg5OUA/ODlXHBwIAhcXTzY1PTw1Nk8XF1tQUHcjIhwcYUNDTgL+3QFt/pOTkwABAAAAAQAAmM7nP18PPPUACwQAAAAAANciZKUAAAAA1yJkpf/9/70FtgPDAAAACAACAAAAAAAAAAEAAAPA/8AAAAW3//3//QW2AAEAAAAAAAAAAAAAAAAAAAAMBAAAAAAAAAAAAAAAAgAAAAQAASAEAADgBAAAwAQAAJ0EAP/9BAAAAAQAAAAFtwAAAAAAAAAKABQAHgAyAEYAjACiAL4BFgE2AY4AAAABAAAADAA8AAMAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEADQAAAAEAAAAAAAIABwCWAAEAAAAAAAMADQBIAAEAAAAAAAQADQCrAAEAAAAAAAUACwAnAAEAAAAAAAYADQBvAAEAAAAAAAoAGgDSAAMAAQQJAAEAGgANAAMAAQQJAAIADgCdAAMAAQQJAAMAGgBVAAMAAQQJAAQAGgC4AAMAAQQJAAUAFgAyAAMAAQQJAAYAGgB8AAMAAQQJAAoANADsd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzVmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzUmVndWxhcgBSAGUAZwB1AGwAYQByd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzRm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\") format(\"truetype\"); font-weight: normal; font-style: normal; }",
+      "@font-face { font-family: Brier; src: url(\"https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67b6113a220f85ad6497495a_Brier-Bold.woff2\") format(\"woff2\"); font-weight: 700; font-style: normal; font-display: swap; }",
+      "@font-face { font-family: \"Mona Sans Variable\"; src: url(\"https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67bc6274c5b4108b123aa4d5_MonaSans-VariableFont_wdth%2Cwght.woff2\") format(\"woff2\"); font-weight: 200 900; font-style: normal; font-display: swap; }"
+    ],
+    "keyframeAnimations": [
+      "@keyframes spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}",
+      "@keyframes translateXLeft { \n  100% { transform: translateX(-100%); }\n}",
+      "@keyframes translateXRight { \n  100% { transform: translateX(100%); }\n}"
+    ]
+  },
+  "assets": {
+    "downloadedCount": 57,
+    "linkedStylesheets": 1,
+    "inlineStyleBlocks": 17,
+    "files": {
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/css/lando-offbrand.shared.b89f36bcb.css": "styles/sheet-0.css",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67f517cdc5bb460c3c3b8e5b_ln4-LN-logo-svg.svg": "assets/1777243346216-67f517cdc5bb460c3c3b8e5b_ln4-LN-logo-svg.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67cecea4e9d311047dcb51e5_ln4-hw-signature2.svg": "assets/1777243346245-67cecea4e9d311047dcb51e5_ln4-hw-signature2.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67bc6274c5b4108b123aa4d5_MonaSans-VariableFont_wdth%2Cwght.woff2": "assets/1777243346277-67bc6274c5b4108b123aa4d5_MonaSans-VariableFont_wdth%2Cwght.woff2",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67d2dd47cfe84bed1dce9542_ln4-footer-mask-desktop.svg": "assets/1777243346371-67d2dd47cfe84bed1dce9542_ln4-footer-mask-desktop.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67e2c781c4c953cd9e74eda5_ln4-2-helm-mask-fill.svg": "assets/1777243346401-67e2c781c4c953cd9e74eda5_ln4-2-helm-mask-fill.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302baa04b14a1ca33c0b25_ln-home-horiz-1.webp": "assets/1777243346430-68302baa04b14a1ca33c0b25_ln-home-horiz-1.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302baab12220595c8223b3_ln-home-horiz-2.webp": "assets/1777243346454-68302baab12220595c8223b3_ln-home-horiz-2.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67d18655b032045a4dc78e53_ln4-hp-lando-helmet.webp": "assets/1777243346486-67d18655b032045a4dc78e53_ln4-hp-lando-helmet.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67d18655b032045a4dc78e56_ln4-hp-lando-head.webp": "assets/1777243346521-67d18655b032045a4dc78e56_ln4-hp-lando-head.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68ea48448e634fcc425b0e28_transp.webp": "assets/1777243346579-68ea48448e634fcc425b0e28_transp.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67b6113a220f85ad6497495a_Brier-Bold.woff2": "assets/1777243346602-67b6113a220f85ad6497495a_Brier-Bold.woff2",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/6830302dadd0727e6ac034dd_ln-social-img-6.webp": "assets/1777243347664-6830302dadd0727e6ac034dd_ln-social-img-6.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/6830302d42237886d0c4b24c_ln-social-img-2.webp": "assets/1777243347694-6830302d42237886d0c4b24c_ln-social-img-2.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67eea130c0f25ef68ac8889e_ln4-helm-mob-refactor-lime-fill.svg": "assets/1777243347734-67eea130c0f25ef68ac8889e_ln4-helm-mob-refactor-lime-fill.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67e4213817c888515fa4855b_ln4-footer-mask-mobile.svg": "assets/1777243347763-67e4213817c888515fa4855b_ln4-footer-mask-mobile.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302babcf12f0111d96322e_ln-home-horiz-3.webp": "assets/1777243347813-68302babcf12f0111d96322e_ln-home-horiz-3.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302baa798e2cc6e02ac38a_ln-home-horiz-4.webp": "assets/1777243347838-68302baa798e2cc6e02ac38a_ln-home-horiz-4.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302baa14a96f3cdd2f9a95_ln-home-horiz-6.webp": "assets/1777243347868-68302baa14a96f3cdd2f9a95_ln-home-horiz-6.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68da85d632bfefc552a0faac_Britain-25%20(1).webp": "assets/1777243347903-68da85d632bfefc552a0faac_Britain-25%20(1).webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/680cbcfdbc4bdc0ef619369f_ln-icon-crossed-flags2.svg": "assets/1777243347931-680cbcfdbc4bdc0ef619369f_ln-icon-crossed-flags2.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302ff5ff89a9a4afb8c19e_ln-home-helm-large.webp": "assets/1777243347959-68302ff5ff89a9a4afb8c19e_ln-home-helm-large.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67e7eeaf67d51519b546828d_ln4-signature-dark-green.webp": "assets/1777243348009-67e7eeaf67d51519b546828d_ln4-signature-dark-green.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302bab3ee6e26b1f434a7d_ln-home-horiz-7.webp": "assets/1777243348038-68302bab3ee6e26b1f434a7d_ln-home-horiz-7.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305b3e6c7ab86033cf172c_In-helm-2025-Season-base.webp": "assets/1777243348099-68305b3e6c7ab86033cf172c_In-helm-2025-Season-base.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302baaedf821dd2e3a7c74_ln-home-horiz-8.webp": "assets/1777243348126-68302baaedf821dd2e3a7c74_ln-home-horiz-8.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305aff4692de3e7ea12251_In-helm-2025-DarkGlitter-base.webp": "assets/1777243348153-68305aff4692de3e7ea12251_In-helm-2025-DarkGlitter-base.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302babb87c5f19ec131093_ln-home-horiz-9.webp": "assets/1777243348182-68302babb87c5f19ec131093_ln-home-horiz-9.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68302bab4f762cdbc5e93415_ln-home-horiz-10.webp": "assets/1777243348203-68302bab4f762cdbc5e93415_ln-home-horiz-10.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305b2259159e5170d2b923_In-helm-2025-Discoball-base.webp": "assets/1777243348232-68305b2259159e5170d2b923_In-helm-2025-Discoball-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305aeac44aa40f7bda5460_In-helm-2024-Season-base.webp": "assets/1777243348257-68305aeac44aa40f7bda5460_In-helm-2024-Season-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305a59417d51c0a58c32c6_In-helm-2024-DarkMode-base.webp": "assets/1777243348286-68305a59417d51c0a58c32c6_In-helm-2024-DarkMode-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305a7d4e96d5f8f44f7803_In-helm-2024-GIF%20Helmet-base.webp": "assets/1777243348316-68305a7d4e96d5f8f44f7803_In-helm-2024-GIF%20Helmet-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/683053f61b468e794507c0a7_In-helm-2023-Beach%20Ball-base.webp": "assets/1777243348346-683053f61b468e794507c0a7_In-helm-2023-Beach%20Ball-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305acf3fccf71c6d72607b_In-helm-2024-Porcelain-base.webp": "assets/1777243348373-68305acf3fccf71c6d72607b_In-helm-2024-Porcelain-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305a459178b78319e05b55_In-helm-2023-Race%20100-base.webp": "assets/1777243348408-68305a459178b78319e05b55_In-helm-2023-Race%20100-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305a153de4a824d397d21d_In-helm-2023-Chrome-base.webp": "assets/1777243348428-68305a153de4a824d397d21d_In-helm-2023-Chrome-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305a980c399022066600a6_In-helm-2024-Japan-base.webp": "assets/1777243348458-68305a980c399022066600a6_In-helm-2024-Japan-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305a2e3fccf71c6d71e5a8_In-helm-2023-Las%20Vegas-base.webp": "assets/1777243348480-68305a2e3fccf71c6d71e5a8_In-helm-2023-Las%20Vegas-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/683052a8a475dfa06075ca17_In-helm-2022-Basketball-base.webp": "assets/1777243348515-683052a8a475dfa06075ca17_In-helm-2022-Basketball-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305038652a87f86290bf3b_ln-helm-2021-base.webp": "assets/1777243348543-68305038652a87f86290bf3b_ln-helm-2021-base.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305139c5020a27624aa793_In-helm-2019-base.webp": "assets/1777243348568-68305139c5020a27624aa793_In-helm-2019-base.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/69458be8f7e939c143a9bed6_lando-store-gold-3.webp": "assets/1777243348589-69458be8f7e939c143a9bed6_lando-store-gold-3.webp",
+      "https://cdn.prod.website-files.com/67d97a68478fe87e30c67abe/68305203f28384dcf8ef81cb_In-helm-2020-Silverstone-base.webp": "assets/1777243348620-68305203f28384dcf8ef81cb_In-helm-2020-Silverstone-base.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/69458be7e803d4123abb47dd_lando-store-gold-5.webp": "assets/1777243348644-69458be7e803d4123abb47dd_lando-store-gold-5.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/69458be88faa89137717632c_lando-store-gold-2.webp": "assets/1777243348675-69458be88faa89137717632c_lando-store-gold-2.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/69458be7e4ccfdba84b69d27_lando-store-gold-1.webp": "assets/1777243348699-69458be7e4ccfdba84b69d27_lando-store-gold-1.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/69458c78c9825ebb795d2e81_LN1.webp": "assets/1777243348727-69458c78c9825ebb795d2e81_LN1.webp",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67efc88cf1d78e3e7624d5e3_ln4-ln4-collab-logo-ps4.svg": "assets/1777243348754-67efc88cf1d78e3e7624d5e3_ln4-ln4-collab-logo-ps4.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67d4349e00e6b7904f3746a3_ln4-ln4-collab-logo-ralph.svg": "assets/1777243348783-67d4349e00e6b7904f3746a3_ln4-ln4-collab-logo-ralph.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67efc88c532235956e5d267a_ln4-ln4-collab-logo-quadrant.svg": "assets/1777243348810-67efc88c532235956e5d267a_ln4-ln4-collab-logo-quadrant.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67efc88cb3373daa7ba240d6_ln4-ln4-collab-logo-tumi.svg": "assets/1777243348841-67efc88cb3373daa7ba240d6_ln4-ln4-collab-logo-tumi.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68d294a99b218abd71dc0764_ln4-ln4-collab-logo-uber.svg": "assets/1777243348874-68d294a99b218abd71dc0764_ln4-ln4-collab-logo-uber.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68dbd5d7a8a302c07e91904d_ln4-ln4-collab-google.svg": "assets/1777243348912-68dbd5d7a8a302c07e91904d_ln4-ln4-collab-google.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68dbd5d7e14222573f46ebdb_ln4-ln4-collab-lnkart.svg": "assets/1777243348940-68dbd5d7e14222573f46ebdb_ln4-ln4-collab-lnkart.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67efc88c1939bc87931c2599_ln4-ln4-collab-logo-hilton.svg": "assets/1777243348968-67efc88c1939bc87931c2599_ln4-ln4-collab-logo-hilton.svg",
+      "https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/68dbd5d718fcdbf76afbcc45_ln4-ln4-collab-pure-electric.svg": "assets/1777243348999-68dbd5d718fcdbf76afbcc45_ln4-ln4-collab-pure-electric.svg"
+    }
+  },
+  "semanticElements": [
+    {
+      "tag": "h1",
+      "text": "Lando Norris",
+      "role": "",
+      "classes": "screen-reader"
+    },
+    {
+      "tag": "h2",
+      "text": "2025 Mclaren Formula 1 Driver",
+      "role": "",
+      "classes": "screen-reader"
+    },
+    {
+      "tag": "h2",
+      "text": "ON",
+      "role": "",
+      "classes": "text-impact-reg-brier"
+    },
+    {
+      "tag": "h2",
+      "text": "TRACK",
+      "role": "",
+      "classes": "text-impact-reg-mona line-increase"
+    },
+    {
+      "tag": "h2",
+      "text": "OFF",
+      "role": "",
+      "classes": "text-impact-reg-brier"
+    },
+    {
+      "tag": "h2",
+      "text": "TRACK",
+      "role": "",
+      "classes": "text-impact-reg-mona line-increase"
+    },
+    {
+      "tag": "h2",
+      "text": "Helmets",
+      "role": "",
+      "classes": "text-title-lg-mona"
+    },
+    {
+      "tag": "h2",
+      "text": "Hall of Fame",
+      "role": "",
+      "classes": "text-title-lg-mona"
+    },
+    {
+      "tag": "h2",
+      "text": "World Drivers' Champion",
+      "role": "",
+      "classes": "text-impact-lg-mona reduce"
+    },
+    {
+      "tag": "h2",
+      "text": "partners",
+      "role": "",
+      "classes": "text-title-lg-mona"
+    },
+    {
+      "tag": "h2",
+      "text": "&campaigns",
+      "role": "",
+      "classes": "text-title-lg-mona"
+    },
+    {
+      "tag": "h2",
+      "text": "what’s upOn Socials",
+      "role": "",
+      "classes": "text-title-lg-mona split-flex is-center"
+    },
+    {
+      "tag": "h2",
+      "text": "Always bringing the fight.",
+      "role": "",
+      "classes": "text-impact-sm-mona footer"
+    },
+    {
+      "tag": "h3",
+      "text": "Season",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Discoball",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Dark Glitter",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Season",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Porcelain",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Japan",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "GIF",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Dark Mode",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Race",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Las Vegas",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Chrome",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Beachball",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Basketball",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Season",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Silverstone",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "h3",
+      "text": "Season",
+      "role": "",
+      "classes": "text-title-small-label text"
+    },
+    {
+      "tag": "p",
+      "text": "Most recent results, career stats and photos from trackside.",
+      "role": "",
+      "classes": "text-body-reg-mona"
+    },
+    {
+      "tag": "p",
+      "text": "Campaigns, shoots and other such promotional materials for fans",
+      "role": "",
+      "classes": "text-body-reg-mona"
+    },
+    {
+      "tag": "p",
+      "text": "From his iconic blobs to innovative one-off designs, Lando has always been passionate about designing innovative and memorable helmets.",
+      "role": "",
+      "classes": "text-body-reg-mona"
+    },
+    {
+      "tag": "p",
+      "text": "Celebrate this incredible moment with a collection designed for the fans who never stopped believing. Wear it, frame it, treasure it forever.",
+      "role": "",
+      "classes": "text-body-reg-mona"
+    },
+    {
+      "tag": "p",
+      "text": "Lando is proud to collaborate with a range of partners, who share his passion for performance across a range of industries.",
+      "role": "",
+      "classes": "text-body-reg-mona"
+    },
+    {
+      "tag": "a",
+      "text": "Store",
+      "role": "",
+      "classes": "btn-w is-nav w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Go to home",
+      "role": "",
+      "classes": "nav-middle w-inline-block w--current"
+    },
+    {
+      "tag": "a",
+      "text": "Home",
+      "role": "",
+      "classes": "nav-menu-link-w w-inline-block w--current"
+    },
+    {
+      "tag": "a",
+      "text": "On Track",
+      "role": "",
+      "classes": "nav-menu-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Off Track",
+      "role": "",
+      "classes": "nav-menu-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Partnerships",
+      "role": "",
+      "classes": "nav-menu-link-w display-none w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Calendar",
+      "role": "",
+      "classes": "nav-menu-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "business enquiries",
+      "role": "",
+      "classes": "text-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "tiktok",
+      "role": "",
+      "classes": "text-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "instagram",
+      "role": "",
+      "classes": "text-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "youtube",
+      "role": "",
+      "classes": "text-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Twitch",
+      "role": "",
+      "classes": "text-link-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Load Norris",
+      "role": "",
+      "classes": "btn-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Miamigp",
+      "role": "",
+      "classes": "home-hero-next-race-row w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "view on track",
+      "role": "",
+      "classes": "btn-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "Visit the store",
+      "role": "",
+      "classes": "btn-w w-inline-block"
+    },
+    {
+      "tag": "a",
+      "text": "view partnerships",
+      "role": "",
+      "classes": "btn-w w-inline-block"
+    },
+    {
+      "tag": "section",
+      "text": "Next Race \n\nMiamigp\nmclaren f1 since 2019mclaren f1 since 2019\n  \n    \n    \n  \n\n\ntap to lockBack to scroll",
+      "role": "",
+      "classes": "s home-hero"
+    },
+    {
+      "tag": "section",
+      "text": "Message from lando",
+      "role": "",
+      "classes": "s home-marquee"
+    },
+    {
+      "tag": "section",
+      "text": "mclaren f1 since 2019Redefining limits, fighting for wins, bringing it all in all ways. Defining a legacy in Formula 1 on and off the track.",
+      "role": "",
+      "classes": "s"
+    },
+    {
+      "tag": "section",
+      "text": "Qatar, 2024FIA Prize Giving, 2024It doesn’t matter where you start, it’s how you progress from there.Miami GP, 2024Monaco, 2023Britain, 20251Battersea, 2024High Performance Gala, 2024Barcelona, 2024Si",
+      "role": "",
+      "classes": "s is-horizontal-track"
+    },
+    {
+      "tag": "section",
+      "text": "ONTRACK\nMost recent results, career stats and photos from trackside.\nOFFTRACKCampaigns, shoots and other such promotional materials for fans",
+      "role": "",
+      "classes": "s is-otot-home"
+    },
+    {
+      "tag": "section",
+      "text": "HelmetsHall of FameFrom his iconic blobs to innovative one-off designs, Lando has always been passionate about designing innovative and memorable helmets.\n\n\n  \nSeason2025\n\n\n  \nDiscoball2025\n\n\n  \nDark ",
+      "role": "",
+      "classes": "s home-helmets"
+    },
+    {
+      "tag": "section",
+      "text": "See more helmets and highlights from Lando on the trackview on track",
+      "role": "",
+      "classes": "s"
+    },
+    {
+      "tag": "section",
+      "text": "LANDO STOREWorld Drivers' ChampionCelebrate this incredible moment with a collection designed for the fans who never stopped believing. Wear it, frame it, treasure it forever.Visit the store",
+      "role": "",
+      "classes": "s is-lando-exe"
+    },
+    {
+      "tag": "section",
+      "text": "partners&campaignsLando is proud to collaborate with a range of partners, who share his passion for performance across a range of industries.view partnerships",
+      "role": "",
+      "classes": "s is-home-collabs"
+    },
+    {
+      "tag": "section",
+      "text": "what’s upOn SocialsFollow Lando on social mediatiktokinstagramYoutubeTwitch",
+      "role": "",
+      "classes": "s is-callout-socials"
+    },
+    {
+      "tag": "section",
+      "text": "pagesHomeOn TrackOff TrackPartnershipsCalendarStoreFollow OnTiktokInstagramYoutubeTwitchSign Up\nAlways bringing the fight.business enquiries\n\n  \n\n  \n\n  \n\n\n\n  \n\n  \n\n  \n\n  \n© 2026 Lando Norris. All righ",
+      "role": "",
+      "classes": "s is-footer"
+    }
+  ],
+  "screenshots": {
+    "viewport": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/viewport.png",
+    "fullPage": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/full-page.png",
+    "sections": [
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-0.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-1.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-2.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-3.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-4.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-5.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-6.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-7.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-8.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/landonorris.com/screenshots/section-9.png"
+    ]
+  }
+}

@@ -1,0 +1,565 @@
+{
+  "clonedFrom": "https://cristiano.com/",
+  "hostname": "cristiano.com",
+  "clonedAt": "2026-04-27T16:30:40.821Z",
+  "page": {
+    "title": "Inicio",
+    "description": "Seminario Bíblico | Instituto de Capacitación | Consejería Pastoral | Psicoterapia Cristiana | Programas Cortos Online de Certificado, Diploma. Licenciatura, Master y Doctorado"
+  },
+  "designTokens": {
+    "cssCustomProperties": {
+      "--wp-block-synced-color": "#7a00df",
+      "--wp-block-synced-color--rgb": "122,0,223",
+      "--wp-bound-block-color": "var(--wp-block-synced-color)",
+      "--wp-editor-canvas-background": "#ddd",
+      "--wp-admin-theme-color": "#007cba",
+      "--wp-admin-theme-color--rgb": "0,124,186",
+      "--wp-admin-theme-color-darker-10": "#006ba1",
+      "--wp-admin-theme-color-darker-10--rgb": "0,107,160.5",
+      "--wp-admin-theme-color-darker-20": "#005a87",
+      "--wp-admin-theme-color-darker-20--rgb": "0,90,135",
+      "--wp-admin-border-width-focus": "2px",
+      "--wp--preset--font-size--normal": "16px",
+      "--wp--preset--font-size--huge": "42px",
+      "--wp--preset--aspect-ratio--square": "1",
+      "--wp--preset--aspect-ratio--4-3": "4/3",
+      "--wp--preset--aspect-ratio--3-4": "3/4",
+      "--wp--preset--aspect-ratio--3-2": "3/2",
+      "--wp--preset--aspect-ratio--2-3": "2/3",
+      "--wp--preset--aspect-ratio--16-9": "16/9",
+      "--wp--preset--aspect-ratio--9-16": "9/16",
+      "--wp--preset--color--black": "#000000",
+      "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+      "--wp--preset--color--white": "#ffffff",
+      "--wp--preset--color--pale-pink": "#f78da7",
+      "--wp--preset--color--vivid-red": "#cf2e2e",
+      "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+      "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+      "--wp--preset--color--light-green-cyan": "#7bdcb5",
+      "--wp--preset--color--vivid-green-cyan": "#00d084",
+      "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+      "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+      "--wp--preset--color--vivid-purple": "#9b51e0",
+      "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)",
+      "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+      "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": "linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%)",
+      "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)",
+      "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+      "--wp--preset--gradient--cool-to-warm-spectrum": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+      "--wp--preset--gradient--blush-light-purple": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+      "--wp--preset--gradient--blush-bordeaux": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+      "--wp--preset--gradient--luminous-dusk": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+      "--wp--preset--gradient--pale-ocean": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+      "--wp--preset--gradient--electric-grass": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+      "--wp--preset--gradient--midnight": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+      "--wp--preset--font-size--small": "13px",
+      "--wp--preset--font-size--medium": "20px",
+      "--wp--preset--font-size--large": "36px",
+      "--wp--preset--font-size--x-large": "42px",
+      "--wp--preset--spacing--20": "0.44rem",
+      "--wp--preset--spacing--30": "0.67rem",
+      "--wp--preset--spacing--40": "1rem",
+      "--wp--preset--spacing--50": "1.5rem",
+      "--wp--preset--spacing--60": "2.25rem",
+      "--wp--preset--spacing--70": "3.38rem",
+      "--wp--preset--spacing--80": "5.06rem",
+      "--wp--preset--shadow--natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+      "--wp--preset--shadow--deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+      "--wp--preset--shadow--sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+      "--wp--preset--shadow--outlined": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)",
+      "--wp--preset--shadow--crisp": "6px 6px 0px rgb(0, 0, 0)",
+      "--page-title-display": "block"
+    },
+    "fontStack": [
+      "Roboto, sans-serif"
+    ],
+    "colorPalette": [
+      "rgb(137, 137, 137)",
+      "rgb(255, 255, 255)",
+      "rgb(34, 34, 34)",
+      "rgb(245, 245, 245)"
+    ],
+    "fontFaceDeclarations": [
+      "@font-face { font-family: FontAwesome; src: url(\"../fonts/fontawesome-webfont.woff2?v=4.7.0\") format(\"woff2\"), url(\"../fonts/fontawesome-webfont.woff?v=4.7.0\") format(\"woff\"), url(\"../fonts/fontawesome-webfont.ttf?v=4.7.0\") format(\"truetype\"); font-weight: normal; font-style: normal; }",
+      "@font-face { font-family: socialicon; src: url(\"../fonts/socialicon.ttf?4xqn5s\") format(\"truetype\"), url(\"../fonts/socialicon.woff?4xqn5s\") format(\"woff\"); font-weight: normal; font-style: normal; }",
+      "@font-face { font-family: bateaux; src: url(\"../fonts/bateaux.woff2\") format(\"woff2\"), url(\"../fonts/bateaux.woff\") format(\"woff\"), url(\"../fonts/bateaux.ttf\") format(\"truetype\"); font-weight: 400; font-style: normal; }",
+      "@font-face { font-family: eicons; src: url(\"../fonts/eicons.woff2?5.15.0\") format(\"woff2\"), url(\"../fonts/eicons.woff?5.15.0\") format(\"woff\"), url(\"../fonts/eicons.ttf?5.15.0\") format(\"truetype\"); font-weight: 400; font-style: normal; }",
+      "@font-face { font-family: \"Font Awesome 5 Brands\"; font-style: normal; font-weight: 400; font-display: block; src: url(\"../webfonts/fa-brands-400.woff2\") format(\"woff2\"), url(\"../webfonts/fa-brands-400.woff\") format(\"woff\"), url(\"../webfonts/fa-brands-400.ttf\") format(\"truetype\"); }",
+      "@font-face { font-family: \"Font Awesome 5 Free\"; font-style: normal; font-weight: 400; font-display: block; src: url(\"../webfonts/fa-regular-400.woff2\") format(\"woff2\"), url(\"../webfonts/fa-regular-400.woff\") format(\"woff\"), url(\"../webfonts/fa-regular-400.ttf\") format(\"truetype\"); }",
+      "@font-face { font-family: \"Font Awesome 5 Free\"; font-style: normal; font-weight: 900; font-display: block; src: url(\"../webfonts/fa-solid-900.woff2\") format(\"woff2\"), url(\"../webfonts/fa-solid-900.woff\") format(\"woff\"), url(\"../webfonts/fa-solid-900.ttf\") format(\"truetype\"); }"
+    ],
+    "keyframeAnimations": [
+      "@keyframes show-content-image { \n  0% { visibility: hidden; }\n  99% { visibility: hidden; }\n  100% { visibility: visible; }\n}",
+      "@keyframes turn-on-visibility { \n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}",
+      "@keyframes turn-off-visibility { \n  0% { opacity: 1; visibility: visible; }\n  99% { opacity: 0; visibility: visible; }\n  100% { opacity: 0; visibility: hidden; }\n}",
+      "@keyframes lightbox-zoom-in { \n  0% { transform: translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale)); }\n  100% { transform: translate(-50%, -50%) scale(1); }\n}",
+      "@keyframes lightbox-zoom-out { \n  0% { transform: translate(-50%, -50%) scale(1); visibility: visible; }\n  99% { visibility: visible; }\n  100% { transform: translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale)); visibility: hidden; }\n}",
+      "@keyframes overlay-menu__fade-in-animation { \n  0% { opacity: 0; transform: translateY(0.5em); }\n  100% { opacity: 1; transform: translateY(0px); }\n}",
+      "@-webkit-keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(359deg); }\n}",
+      "@keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(359deg); }\n}",
+      "@-webkit-keyframes horizontalAnimatedBackground { \n  0% { background-position: 0px 50%; }\n  100% { background-position: 9000px 50%; }\n}",
+      "@keyframes horizontalAnimatedBackground { \n  0% { background-position: 0px 50%; }\n  100% { background-position: 9000px 50%; }\n}",
+      "@-webkit-keyframes verticalAnimatedBackground { \n  0% { background-position: 50% 0px; }\n  100% { background-position: 50% -9000px; }\n}",
+      "@keyframes verticalAnimatedBackground { \n  0% { background-position: 50% 0px; }\n  100% { background-position: 50% -9000px; }\n}",
+      "@-webkit-keyframes zoomInAnimatedBackground { \n  0% { transform: scale(1) translateZ(0px); }\n  100% { transform: scale(1.2) translateZ(0px); }\n}",
+      "@keyframes zoomInAnimatedBackground { \n  0% { transform: scale(1) translateZ(0px); }\n  100% { transform: scale(1.2) translateZ(0px); }\n}",
+      "@-webkit-keyframes zoomOutAnimatedBackground { \n  0% { transform: scale(1.2) translateZ(0px); }\n  100% { transform: scale(1) translateZ(0px); }\n}",
+      "@keyframes zoomOutAnimatedBackground { \n  0% { transform: scale(1.2) translateZ(0px); }\n  100% { transform: scale(1) translateZ(0px); }\n}",
+      "@-webkit-keyframes blink { \n  0%, 100% { opacity: 1; }\n  50% { opacity: 0; }\n}",
+      "@keyframes blink { \n  0%, 100% { opacity: 1; }\n  50% { opacity: 0; }\n}",
+      "@-webkit-keyframes zoomOutEnter { \n  0% { opacity: 0; transform: scale(1.2); }\n  100%, 50% { opacity: 1; }\n}",
+      "@keyframes zoomOutEnter { \n  0% { opacity: 0; transform: scale(1.2); }\n  100%, 50% { opacity: 1; }\n}",
+      "@-webkit-keyframes zoomIn { \n  0% { opacity: 0; transform: scale(0.2); transition-timing-function: ease-out; }\n  100%, 50% { opacity: 1; }\n}",
+      "@keyframes zoomIn { \n  0% { opacity: 0; transform: scale(0.2); transition-timing-function: ease-out; }\n  100%, 50% { opacity: 1; }\n}",
+      "@-webkit-keyframes zoomInUp { \n  0% { opacity: 0; transform: scale(0.1) translateY(400px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  60% { opacity: 1; transform: scale(0.475) translateY(-60px); animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }\n  100% { opacity: 1; }\n}",
+      "@keyframes zoomInUp { \n  0% { opacity: 0; transform: scale(0.1) translateY(400px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  60% { opacity: 1; transform: scale(0.475) translateY(-60px); animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }\n  100% { opacity: 1; }\n}",
+      "@-webkit-keyframes zoomOut { \n  0% { opacity: 1; }\n  50% { opacity: 0; transform: scale(0.3); }\n  100% { opacity: 0; }\n}",
+      "@keyframes zoomOut { \n  0% { opacity: 1; }\n  50% { opacity: 0; transform: scale(0.3); }\n  100% { opacity: 0; }\n}",
+      "@-webkit-keyframes fadeIn { \n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}",
+      "@keyframes fadeIn { \n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}",
+      "@-webkit-keyframes fadeInUp { \n  0% { opacity: 0; transform: translateY(40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@keyframes fadeInUp { \n  0% { opacity: 0; transform: translateY(40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@-webkit-keyframes fadeInDown { \n  0% { opacity: 0; transform: translateY(-40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@keyframes fadeInDown { \n  0% { opacity: 0; transform: translateY(-40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@-webkit-keyframes fadeInLeft { \n  0% { opacity: 0; transform: translateX(-40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@keyframes fadeInLeft { \n  0% { opacity: 0; transform: translateX(-40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@-webkit-keyframes fadeInRight { \n  0% { opacity: 0; transform: translateX(40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@keyframes fadeInRight { \n  0% { opacity: 0; transform: translateX(40px); }\n  100% { opacity: 1; transform: none; }\n}",
+      "@-webkit-keyframes fadeOut { \n  0% { opacity: 1; }\n  100% { opacity: 0; }\n}",
+      "@keyframes fadeOut { \n  0% { opacity: 1; }\n  100% { opacity: 0; }\n}",
+      "@-webkit-keyframes fadeOutAbs { \n  0% { position: relative; opacity: 1; }\n  100% { position: absolute; opacity: 0; }\n}",
+      "@keyframes fadeOutAbs { \n  0% { position: relative; opacity: 1; }\n  100% { position: absolute; opacity: 0; }\n}",
+      "@-webkit-keyframes slideInLeft { \n  0% { opacity: 0; visibility: hidden; transform: translateX(-40px); }\n  100% { opacity: 1; visibility: visible; transform: translateX(0px); }\n}",
+      "@keyframes slideInLeft { \n  0% { opacity: 0; visibility: hidden; transform: translateX(-40px); }\n  100% { opacity: 1; visibility: visible; transform: translateX(0px); }\n}",
+      "@-webkit-keyframes slideInRight { \n  0% { opacity: 0; visibility: hidden; transform: translateX(40px); }\n  100% { opacity: 1; visibility: visible; transform: translateX(0px); }\n}",
+      "@keyframes slideInRight { \n  0% { opacity: 0; visibility: hidden; transform: translateX(40px); }\n  100% { opacity: 1; visibility: visible; transform: translateX(0px); }\n}",
+      "@-webkit-keyframes slideInUp { \n  0% { opacity: 0; visibility: hidden; transform: translateY(40px); }\n  100% { opacity: 1; visibility: visible; transform: translateY(0px); }\n}",
+      "@keyframes slideInUp { \n  0% { opacity: 0; visibility: hidden; transform: translateY(40px); }\n  100% { opacity: 1; visibility: visible; transform: translateY(0px); }\n}",
+      "@-webkit-keyframes slideInDown { \n  0% { opacity: 0; visibility: hidden; transform: translateY(-40px); }\n  100% { opacity: 1; visibility: visible; transform: translateY(0px); }\n}",
+      "@keyframes slideInDown { \n  0% { opacity: 0; visibility: hidden; transform: translateY(-40px); }\n  100% { opacity: 1; visibility: visible; transform: translateY(0px); }\n}",
+      "@-webkit-keyframes btx-double-bounce { \n  0%, 100% { transform: scale(0); }\n  50% { transform: scale(1); }\n}",
+      "@keyframes btx-double-bounce { \n  0%, 100% { transform: scale(0); }\n  50% { transform: scale(1); }\n}",
+      "@-webkit-keyframes btx-three-bounce { \n  0%, 100%, 80% { transform: scale(0); }\n  40% { transform: scale(1); }\n}",
+      "@keyframes btx-three-bounce { \n  0%, 100%, 80% { transform: scale(0); }\n  40% { transform: scale(1); }\n}",
+      "@-webkit-keyframes btx-wave-stretch-delay { \n  0%, 100%, 40% { transform: scaleY(0.4); }\n  20% { transform: scaleY(1); }\n}",
+      "@keyframes btx-wave-stretch-delay { \n  0%, 100%, 40% { transform: scaleY(0.4); }\n  20% { transform: scaleY(1); }\n}",
+      "@-webkit-keyframes btx-circle-fade { \n  0%, 100%, 39% { opacity: 0; }\n  40% { opacity: 1; }\n}",
+      "@keyframes btx-circle-fade { \n  0%, 100%, 39% { opacity: 0; }\n  40% { opacity: 1; }\n}",
+      "@-webkit-keyframes btx-ring-anim { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}",
+      "@keyframes btx-ring-anim { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}",
+      "@-webkit-keyframes btx-ripple-anim { \n  0% { width: 0px; height: 0px; opacity: 0; margin: 0px; }\n  33% { width: 44%; height: 44%; margin: -22% 0px 0px -22%; opacity: 1; }\n  100% { width: 88%; height: 88%; margin: -44% 0px 0px -44%; opacity: 0; }\n}",
+      "@keyframes btx-ripple-anim { \n  0% { width: 0px; height: 0px; opacity: 0; margin: 0px; }\n  33% { width: 44%; height: 44%; margin: -22% 0px 0px -22%; opacity: 1; }\n  100% { width: 88%; height: 88%; margin: -44% 0px 0px -44%; opacity: 0; }\n}",
+      "@-webkit-keyframes btx-logo-anim { \n  0%, 100% { opacity: 1; }\n  50% { opacity: 0; }\n}",
+      "@keyframes btx-logo-anim { \n  0%, 100% { opacity: 1; }\n  50% { opacity: 0; }\n}",
+      "@-webkit-keyframes a { \n  100% { transform: rotate(1turn); }\n}",
+      "@keyframes a { \n  100% { transform: rotate(1turn); }\n}",
+      "@-webkit-keyframes b { \n  0% { background-position: 0px 0px; }\n  100% { background-position: 30px 0px; }\n}",
+      "@keyframes b { \n  0% { background-position: 0px 0px; }\n  100% { background-position: 30px 0px; }\n}",
+      "@keyframes a { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(359deg); }\n}",
+      "@-webkit-keyframes eicon-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(359deg); }\n}",
+      "@keyframes eicon-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(359deg); }\n}",
+      "@-webkit-keyframes dnd-placeholder-widget-vertical { \n  0% { transform-origin: 0px 50%; transform: translateX(50%) scaleX(0); opacity: 0; }\n  100% { transform-origin: 0px 50%; transform: translateX(50%) scaleX(1); opacity: 0.9; }\n}",
+      "@keyframes dnd-placeholder-widget-vertical { \n  0% { transform-origin: 0px 50%; transform: translateX(50%) scaleX(0); opacity: 0; }\n  100% { transform-origin: 0px 50%; transform: translateX(50%) scaleX(1); opacity: 0.9; }\n}",
+      "@-webkit-keyframes dnd-placeholder-widget-horizontal { \n  0% { transform-origin: 50% 0px; transform: scaleY(0); opacity: 0; }\n  100% { transform-origin: 50% 0px; transform: scaleY(1); opacity: 0.9; }\n}",
+      "@keyframes dnd-placeholder-widget-horizontal { \n  0% { transform-origin: 50% 0px; transform: scaleY(0); opacity: 0; }\n  100% { transform-origin: 50% 0px; transform: scaleY(1); opacity: 0.9; }\n}",
+      "@-webkit-keyframes swiper-preloader-spin { \n  100% { transform: rotate(1turn); }\n}",
+      "@keyframes swiper-preloader-spin { \n  100% { transform: rotate(1turn); }\n}",
+      "@-webkit-keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}",
+      "@keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    ]
+  },
+  "assets": {
+    "downloadedCount": 58,
+    "linkedStylesheets": 20,
+    "inlineStyleBlocks": 9,
+    "files": {
+      "https://www.doxa.edu/wp-content/plugins/embed-pdf-viewer/css/embed-pdf-viewer.css?ver=2.4.6": "styles/sheet-0.css",
+      "https://www.doxa.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4": "styles/sheet-1.css",
+      "https://www.doxa.edu/wp-content/plugins/embed-any-document/css/embed-public.min.css?ver=2.7.12": "styles/sheet-2.css",
+      "https://www.doxa.edu/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0": "styles/sheet-3.css",
+      "https://www.doxa.edu/wp-content/plugins/social-icon-widget/assets/css/style.css?ver=6.9.4": "styles/sheet-4.css",
+      "https://www.doxa.edu/wp-content/plugins/wp-social-widget/assets/css/social-icons.css?ver=2.3.1": "styles/sheet-5.css",
+      "https://www.doxa.edu/wp-content/plugins/wp-social-widget/assets/css/social-style.css?ver=2.3.1": "styles/sheet-6.css",
+      "https://www.doxa.edu/wp-content/themes/bateaux/dist/css/main.min.css?ver=1.1.30": "styles/sheet-7.css",
+      "https://www.doxa.edu/wp-content/themes/bateaux-child/style.css?ver=6.9.4": "styles/sheet-8.css",
+      "https://www.doxa.edu/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17": "styles/sheet-9.css",
+      "https://www.doxa.edu/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.9.4": "styles/sheet-10.css",
+      "https://www.doxa.edu/wp-content/uploads/style-custom.css?ver=4410ffcf": "styles/sheet-11.css",
+      "https://fonts.googleapis.com/css?family=Roboto%3A400%2C400italic%2C700%2C700italic%2C500%2C500italic&ver=6.9.4": "styles/sheet-12.css",
+      "https://www.doxa.edu/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.15.0": "styles/sheet-13.css",
+      "https://www.doxa.edu/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.6.4": "styles/sheet-14.css",
+      "https://www.doxa.edu/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.6.4": "styles/sheet-15.css",
+      "https://www.doxa.edu/wp-content/uploads/elementor/css/post-11168.css?ver=1649922975": "styles/sheet-16.css",
+      "https://www.doxa.edu/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.6.4": "styles/sheet-17.css",
+      "https://www.doxa.edu/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.6.4": "styles/sheet-18.css",
+      "https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=auto&ver=6.9.4": "styles/sheet-19.css",
+      "https://www.doxa.edu/wp-content/uploads/2026/04/Logo-26B.bmp": "assets/1777307434140-Logo-26B.bmp",
+      "https://www.doxa.edu/wp-content/uploads/2026/02/Logoweb40-e1771470711416.jpg": "assets/1777307434467-Logoweb40-e1771470711416.jpg",
+      "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2": "assets/1777307434575-KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+      "https://www.doxa.edu/wp-content/uploads/2013/07/dreamstime_xs_9971739-300x168.jpg": "assets/1777307434634-dreamstime_xs_9971739-300x168.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2013/07/MTJ2.jpg": "assets/1777307434680-MTJ2.jpg",
+      "https://www.doxa.edu/wp-content/themes/bateaux/dist/fonts/bateaux.woff2": "assets/1777307434814-bateaux.woff2",
+      "https://www.doxa.edu/wp-content/uploads/2013/07/MTJ2-300x174.jpg": "assets/1777307434852-MTJ2-300x174.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2013/07/ATL-ALUM1-300x178.jpg": "assets/1777307434891-ATL-ALUM1-300x178.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2013/07/dreamstime_xs_7034842-300x154.jpg": "assets/1777307434935-dreamstime_xs_7034842-300x154.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2013/07/Grad072-300x166.jpg": "assets/1777307434971-Grad072-300x166.jpg",
+      "https://www.doxa.edu/wp-content/themes/bateaux/dist/images/bateaux-placeholder.png": "assets/1777307435007-bateaux-placeholder.png",
+      "https://www.doxa.edu/wp-content/uploads/2025/06/Estudios-150x150.jpg": "assets/1777307435045-Estudios-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2021/04/29-Capel-Counsel-6-150x150.jpg": "assets/1777307435079-29-Capel-Counsel-6-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2021/04/30.-Chap-Couns-150x150.jpg": "assets/1777307435119-30.-Chap-Couns-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2018/07/Pastor-150x150.jpg": "assets/1777307435155-Pastor-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2025/04/EstBiblico-150x150.jpg": "assets/1777307435191-EstBiblico-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2021/04/56-Perapia-Matr-III-150x150.jpg": "assets/1777307435228-56-Perapia-Matr-III-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2019/02/coaching-cristiano-1-1-150x150.jpg": "assets/1777307435265-coaching-cristiano-1-1-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2016/10/estbib-150x150.png": "assets/1777307435304-estbib-150x150.png",
+      "https://www.doxa.edu/wp-content/uploads/2024/11/Clases-Cada-2-150x150.jpg": "assets/1777307435342-Clases-Cada-2-150x150.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2024/11/Clases-Cada-2.jpg": "assets/1777307435378-Clases-Cada-2.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2013/07/GradPr2016.jpg": "assets/1777307435427-GradPr2016.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2025/08/40-anosUlt.jpg": "assets/1777307435471-40-anosUlt.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2021/11/AlumTodos2.jpg": "assets/1777307435512-AlumTodos2.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2023/04/chica6.jpg": "assets/1777307435561-chica6.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2021/11/Iglesia2.png": "assets/1777307435598-Iglesia2.png",
+      "https://www.doxa.edu/wp-content/uploads/2024/08/Avatar-DIU-6.png": "assets/1777307435650-Avatar-DIU-6.png",
+      "https://www.doxa.edu/wp-content/uploads/2015/09/La-Ciudad-de-Dios.jpg": "assets/1777307435701-La-Ciudad-de-Dios.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2019/10/Aconsejado5.jpg": "assets/1777307435739-Aconsejado5.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2025/12/consejeros9Buco9.jpg": "assets/1777307435777-consejeros9Buco9.jpg",
+      "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnkaSTbQWg.woff2": "assets/1777307435798-KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnkaSTbQWg.woff2",
+      "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBHMdazTgWw.woff2": "assets/1777307435920-KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBHMdazTgWw.woff2",
+      "https://t1.mylivechat.com/livechat/template/images/inpage_1_up.png": "assets/1777307436215-inpage_1_up.png",
+      "https://t1.mylivechat.com/livechat/template/images/inpage_1_exit.png": "assets/1777307436453-inpage_1_exit.png",
+      "https://www.doxa.edu/wp-content/uploads/2022/11/Testimonio22.jpg": "assets/1777307436496-Testimonio22.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2022/11/Presiona.jpg": "assets/1777307436533-Presiona.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2022/11/CnGratis.jpg": "assets/1777307436586-CnGratis.jpg",
+      "https://www.doxa.edu/wp-content/uploads/2026/02/Footer4.jpg": "assets/1777307436622-Footer4.jpg"
+    }
+  },
+  "semanticElements": [
+    {
+      "tag": "h4",
+      "text": "Cursos Cortos",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Técnico Universitario en Psicología",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Profesional Licenciado en Psicología Familiar – Matrimonial",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Profesional Licenciado en Estudios Biblicos y Teología",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Tecnico Universitario en Estudios Biblicos y Teología",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Master en Psicología Clínica",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Coaching Cristiano Hoy",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Cada Mes Inician las Clases",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "h4",
+      "text": "Estudios en Biblia y Teología",
+      "role": "",
+      "classes": "btx-entry-title btx-s-text-color btx-secondary-font"
+    },
+    {
+      "tag": "a",
+      "text": "Inicio",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Institucion",
+      "role": "",
+      "classes": "sf-with-ul"
+    },
+    {
+      "tag": "a",
+      "text": "Habla el Presidente",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Declaracion de Fe",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Acreditación",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Testimonio de Alumnos",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Quienes Somos",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Requisitos de Ingreso",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Solicitud",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Preguntas Frecuentes",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Licenciado | Profesional",
+      "role": "",
+      "classes": "sf-with-ul"
+    },
+    {
+      "tag": "a",
+      "text": "Tecnico Universitario en Estudios Biblicos & Teología",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Técnico Universitario en Psicología de Orientación Cristiana",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Profesional o Licenciado en Estudios Bíblicos & Teología",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Profesional o Licenciado en Psicología Familiar y Matrimonial – Orientación Cristiana",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Profesional o Licenciado en Psicología Clínica – Orientación Cristiana",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Capellania2",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Cursos Cortos",
+      "role": "",
+      "classes": ""
+    },
+    {
+      "tag": "a",
+      "text": "Master | Doctor",
+      "role": "",
+      "classes": "sf-with-ul"
+    },
+    {
+      "tag": "button",
+      "text": "1",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "2",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "3",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "4",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "5",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "6",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "7",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "8",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "9",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "10",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "button",
+      "text": "11",
+      "role": "button",
+      "classes": ""
+    },
+    {
+      "tag": "nav",
+      "text": "InicioInstitucionHabla el PresidenteDeclaracion de FeAcreditaciónTestimonio de AlumnosQuienes SomosRequisitos de IngresoSolicitudPreguntas FrecuentesLicenciado | ProfesionalTecnico Universitario en Es",
+      "role": "",
+      "classes": "btx-navbar btx-navbar--stacked btx-light-scheme btx-highlight-default btx-navbar-dropdown-dark-schem"
+    },
+    {
+      "tag": "header",
+      "text": "InicioInstitucionHabla el PresidenteDeclaracion de FeAcreditaciónTestimonio de AlumnosQuienes SomosRequisitos de IngresoSolicitudPreguntas FrecuentesLicenciado | ProfesionalTecnico Universitario en Es",
+      "role": "",
+      "classes": "btx-header"
+    },
+    {
+      "tag": "footer",
+      "text": "© 2026 Doxa All rights reserved.",
+      "role": "",
+      "classes": "btx-footer btx-light-scheme type-footer-bottombar"
+    },
+    {
+      "tag": "article",
+      "text": "Online en Universidad con costos de Instituto\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTodos sonrienPorque en solo18 mesesGraduaron conTítulo profesional\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
+      "role": "",
+      "classes": "btx-content-wrapper post-8718 page type-page status-publish hentry btx_page_category-consejeria-past"
+    },
+    {
+      "tag": "article",
+      "text": "Cursos Cortos\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEn 6 / 8 meses te puedes capacitar ONLINE en cualquiera de estas diferentes disciplinas: Psicoterapia Cristiana Neuro Te",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-12841 post type-post status-publish format-standard has-post-thum"
+    },
+    {
+      "tag": "article",
+      "text": "Técnico Universitario en Psicología\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTécnico Universitario en Psicología – Orientación Cristiana   En USA Associate of Arts – Christian",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-12799 post type-post status-publish format-standard has-post-thum"
+    },
+    {
+      "tag": "article",
+      "text": "Profesional Licenciado en Psicología Familiar – Matrimonial\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tProfesional Licenciado en Psicología Matrimonial – Familiar Programa y Req",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-12784 post type-post status-publish format-standard has-post-thum"
+    },
+    {
+      "tag": "article",
+      "text": "Profesional Licenciado en Estudios Biblicos y Teología\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tProfesional Licenciado en Estudios Bíblicos & Teología Este titulo en USA se tr",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-12785 post type-post status-publish format-standard has-post-thum"
+    },
+    {
+      "tag": "article",
+      "text": "Tecnico Universitario en Estudios Biblicos y Teología\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTécnico Universitario en Estudios Bíblicos & Teología En USA Associate of Arts –",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-12787 post type-post status-publish format-standard has-post-thum"
+    },
+    {
+      "tag": "article",
+      "text": "Master en Psicología Clínica\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMaster en Psicología Clínica – Orientación Cristiana En USA Master of Clinical Psychology – Christian Wor",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-12786 post type-post status-publish format-standard has-post-thum"
+    },
+    {
+      "tag": "article",
+      "text": "Featured\n\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\t\t\n\t\t\t\t\n\n\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tCoaching Cristiano Hoy\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-10122 post type-post status-publish format-standard has-post-thum"
+    },
+    {
+      "tag": "article",
+      "text": "Cada Mes Inician las Clases\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTU PROGRAMA COMIENZA TODOS LOS MESES Cursando 12 Materias a nivel universitario, gradúas como “Associate (",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-8611 post type-post status-publish format-standard has-post-thumb"
+    },
+    {
+      "tag": "article",
+      "text": "Estudios en Biblia y Teología\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLuego de tu Salvación el próximo paso es conocer a Dios profundamente y esto es imposible lograrlo sin u",
+      "role": "",
+      "classes": "btx-entry btx-entry--standard post-7976 post type-post status-publish format-standard has-post-thumb"
+    }
+  ],
+  "screenshots": {
+    "viewport": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/viewport.png",
+    "fullPage": "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/full-page.png",
+    "sections": [
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-0.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-1.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-2.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-3.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-4.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-5.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-6.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-7.png",
+      "/Users/markususche/Documents/NYCTailblazers/Projects/Browser Automation/data/clones/cristiano.com/screenshots/section-8.png"
+    ]
+  }
+}

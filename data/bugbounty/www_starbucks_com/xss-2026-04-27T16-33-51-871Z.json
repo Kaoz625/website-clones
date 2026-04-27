@@ -1,0 +1,12 @@
+{
+  "target": "https://www.starbucks.com",
+  "scanned_at": "2026-04-27T16-33-51-871Z",
+  "endpoints_crawled": 5,
+  "params_tested": 17,
+  "findings": [],
+  "summary": {
+    "total": 0,
+    "confirmed_xss": 0,
+    "reflected": 0
+  }
+}

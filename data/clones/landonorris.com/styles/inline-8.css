@@ -1,0 +1,101 @@
+
+
+  [data-nav-theme] .nav-brand path {
+    transition: fill var(--animation-default);
+  }
+
+  [data-nav-theme="light"] .nav-brand [nav-brand-path="1"] { 
+    fill: var(--color--grey-2);
+  }
+  [data-nav-theme="light"] .nav-brand [nav-brand-path="2"] { 
+    fill: var(--color--grey-1);
+  }
+
+  [data-nav-theme="dark"] .nav-brand [nav-brand-path="1"] { 
+    fill: var(--color--dark-green);
+  }
+  [data-nav-theme="dark"] .nav-brand [nav-brand-path="2"] { 
+    fill: var(--color--dark-green);
+  }
+
+  .nav-middle {
+    transition: color var(--animation-default);
+  }
+  [data-nav-theme="light"] .nav-middle {
+    color: var(--color--white);
+  }
+  [data-nav-theme="dark"] .nav-middle {
+    color: var(--color--dark-green);
+  }
+
+  .nav-ham {
+    transition: 
+      border-color var(--animation-default), 
+      background-color var(--animation-default);
+  }
+
+  [data-nav-theme="dark"] .nav-ham {
+    border-color: var(--color--dark-green);
+    background-color: transparent;
+  }
+  [data-nav-theme="light"] .nav-ham {
+    border-color: var(--color--white);
+  }
+
+  [data-nav-wrap] canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav-menu-link-current-svg {
+    visibility: hidden;
+  }
+  .nav-menu-link-w.w--current .nav-menu-link-current-svg {
+    visibility: visible;
+  }
+
+  .footer-layout-clip {
+    --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67d2dd47cfe84bed1dce9542_ln4-footer-mask-desktop.svg');
+
+    /* Apply the image mask using the variable */
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+
+    /* Additional mask settings */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  /* ----- tablet */
+  @media only screen and (max-width: 479px) {
+    .footer-layout-clip {
+      --mask-url: url('https://cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/67e4213817c888515fa4855b_ln4-footer-mask-mobile.svg');
+    }
+  }
+
+
+  [data-footer-theme="white"] {
+    background-color: var(--color--white);
+  }
+
+  [data-footer-theme="black"] {
+    background-color: var(--color--black);
+  }
+  [data-footer-theme="black"]  .footer-layout-clip {
+    background-color: var(--color--black);
+  }
+
+  [data-footer-theme="green"] {
+    background-color: var(--color--dark-green);
+  }
+
+
+  .kl-teaser-XpbhAP {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+

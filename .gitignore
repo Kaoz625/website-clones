@@ -1,0 +1,16 @@
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+/screenshots/
+.env
+*.har
+*.zip
+auth/
+storage-state.json
+.DS_Store
+.claude/
+.omc/
+.playwright-mcp/
+AllPasswords_Organized.md
+portfolio-index.png

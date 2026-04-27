@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tell us about yourself</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #282c20;
+      --text:      #f4f4ed;
+      --accent:    #d2ff00;
+      --black:     #111112;
+      --surface:   #3b3c38;
+      --surface-2: #535450;
+      --ease:      cubic-bezier(0.65, 0.05, 0, 1);
+      --ease-2:    cubic-bezier(0.19, 1, 0.22, 1);
+      --duration:  0.75s;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Mona Sans", "Space Grotesk", system-ui, sans-serif;
+      overflow: hidden;
+    }
+
+    /* ── Progress bar ── */
+    .progress-track {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--surface);
+      z-index: 100;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      width: 0%;
+      transition: width var(--duration) var(--ease);
+    }
+
+    /* ── Step counter ── */
+    .step-counter {
+      position: fixed;
+      top: 1.75rem; right: 2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--surface-2);
+      z-index: 100;
+      transition: opacity 0.3s ease;
+    }
+
+    /* ── Slide container ── */
+    #slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10vw;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(48px);
+      transition:
+        opacity var(--duration) var(--ease),
+        transform var(--duration) var(--ease);
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+
+    .slide.exit-up {
+      opacity: 0;
+      transform: translateY(-48px);
+      pointer-events: none;
+    }
+
+    /* ── Review slide needs scroll ── */
+    .slide.review-slide {
+      overflow-y: auto;
+      justify-content: flex-start;
+      padding-top: 6rem;
+      padding-bottom: 4rem;
+    }
+
+    /* ── Step label ── */
+    .step-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Heading ── */
+    .slide h1 {
+      font-size: clamp(2rem, 5vw, 3.75rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      max-width: 18ch;
+    }
+
+    .slide h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    /* ── Input row ── */
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 2px solid var(--surface);
+      padding-bottom: 0.875rem;
+      max-width: 560px;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-row:focus-within {
+      border-color: var(--accent);
+    }
+
+    .input-row input,
+    .input-row textarea {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      color: var(--text);
+      caret-color: var(--accent);
+      resize: none;
+    }
+
+    .input-row textarea {
+      min-height: 2.5rem;
+      max-height: 6rem;
+      line-height: 1.5;
+      padding-top: 0.2rem;
+    }
+
+    .input-row input::placeholder,
+    .input-row textarea::placeholder {
+      color: var(--surface-2);
+    }
+
+    /* ── CTA button ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      flex-shrink: 0;
+      padding: 0.55rem 1.1rem;
+      background: var(--accent);
+      color: var(--black);
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition:
+        background 0.3s var(--ease),
+        transform 0.2s var(--ease);
+    }
+
+    .btn:hover  { background: #e8ff4d; }
+    .btn:active { transform: scale(0.96); }
+
+    .btn kbd {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.2em;
+      height: 1.2em;
+      background: rgba(0,0,0,0.18);
+      border-radius: 3px;
+      font-family: inherit;
+      font-size: 0.85em;
+    }
+
+    /* ── Hint text ── */
+    .hint {
+      margin-top: 1.25rem;
+      font-size: 0.78rem;
+      color: var(--surface-2);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Review grid ── */
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--surface);
+      border: 1px solid var(--surface);
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    .review-cell {
+      background: var(--bg);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .review-cell .r-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--surface-2);
+    }
+
+    .review-cell .r-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .review-cell .r-value.empty {
+      color: var(--surface-2);
+      font-style: italic;
+    }
+
+    .review-cell.full-width {
+      grid-column: 1 / -1;
+    }
+
+    /* ── Submit button ── */
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.25rem;
+      background: var(--accent);
+      color: var(--black);
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background 0.3s var(--ease), transform 0.2s var(--ease);
+    }
+
+    .submit-btn:hover  { background: #e8ff4d; }
+    .submit-btn:active { transform: scale(0.97); }
+
+    /* ── Back button ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.1rem;
+      border: 1.5px solid var(--surface);
+      background: transparent;
+      color: var(--surface-2);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: border-color 0.3s ease, color 0.3s ease;
+      margin-bottom: 1.75rem;
+    }
+
+    .back-btn:hover { border-color: var(--text); color: var(--text); }
+
+    .review-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── Confirmation ── */
+    .slide.confirm-slide h1 {
+      max-width: 24ch;
+    }
+
+    .confirm-details {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--surface-2);
+      line-height: 1.7;
+      max-width: 36ch;
+    }
+
+    .confirm-details strong {
+      color: var(--accent);
+    }
+
+    .restart-btn {
+      margin-top: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border: 1.5px solid var(--surface);
+      background: transparent;
+      color: var(--text);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .restart-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Error shake ── */
+    @keyframes shake {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(-8px); }
+      40%  { transform: translateX(8px); }
+      60%  { transform: translateX(-5px); }
+      80%  { transform: translateX(5px); }
+      100% { transform: translateX(0); }
+    }
+
+    .input-row.error {
+      border-color: #ff4d4d;
+      animation: shake 0.35s var(--ease-2);
+    }
+
+    /* ── Watermark ── */
+    .watermark {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 2rem;
+      font-size: 0.72rem;
+      color: var(--surface-2);
+      letter-spacing: 0.06em;
+      pointer-events: none;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .slide { padding: 0 6vw; }
+      .input-row { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; justify-content: center; padding: 0.8rem; font-size: 0.9rem; }
+      .review-grid { grid-template-columns: 1fr; }
+      .review-cell.full-width { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-track">
+  <div class="progress-fill" id="progressFill"></div>
+</div>
+
+<div class="step-counter" id="stepCounter">1 / 12</div>
+
+<div id="slides">
+
+  <!-- 01 First name -->
+  <div class="slide active" data-step="1">
+    <span class="step-label">01 /</span>
+    <h1>What's your <em>first name?</em></h1>
+    <div class="input-row" id="row-1">
+      <input type="text" id="input-1" placeholder="Jane" autocomplete="given-name" autocorrect="off">
+      <button class="btn" data-step="1">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 02 Last name -->
+  <div class="slide" data-step="2">
+    <span class="step-label">02 /</span>
+    <h1>And your <em>last name?</em></h1>
+    <div class="input-row" id="row-2">
+      <input type="text" id="input-2" placeholder="Smith" autocomplete="family-name" autocorrect="off">
+      <button class="btn" data-step="2">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 03 Phone -->
+  <div class="slide" data-step="3">
+    <span class="step-label">03 /</span>
+    <h1>Best <em>phone number</em> to reach you?</h1>
+    <div class="input-row" id="row-3">
+      <input type="tel" id="input-3" placeholder="+1 (212) 555-0100" autocomplete="tel">
+      <button class="btn" data-step="3">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 04 Business -->
+  <div class="slide" data-step="4">
+    <span class="step-label">04 /</span>
+    <h1>What's your <em>business?</em></h1>
+    <div class="input-row" id="row-4">
+      <input type="text" id="input-4" placeholder="Acme Inc." autocomplete="organization" autocorrect="off">
+      <button class="btn" data-step="4">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 05 Email -->
+  <div class="slide" data-step="5">
+    <span class="step-label">05 /</span>
+    <h1>What's your <em>email address?</em></h1>
+    <div class="input-row" id="row-5">
+      <input type="email" id="input-5" placeholder="jane@acme.com" autocomplete="email" autocorrect="off" autocapitalize="off">
+      <button class="btn" data-step="5">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 06 Role -->
+  <div class="slide" data-step="6">
+    <span class="step-label">06 /</span>
+    <h1>What's your <em>role?</em></h1>
+    <div class="input-row" id="row-6">
+      <input type="text" id="input-6" placeholder="CEO / Founder / Head of Marketing..." autocorrect="off">
+      <button class="btn" data-step="6">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 07 Company size -->
+  <div class="slide" data-step="7">
+    <span class="step-label">07 /</span>
+    <h1>How large is your <em>team?</em></h1>
+    <div class="input-row" id="row-7">
+      <input type="text" id="input-7" placeholder="1–10 / 11–50 / 51–200 / 200+" autocorrect="off">
+      <button class="btn" data-step="7">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 08 Industry -->
+  <div class="slide" data-step="8">
+    <span class="step-label">08 /</span>
+    <h1>What <em>industry</em> are you in?</h1>
+    <div class="input-row" id="row-8">
+      <input type="text" id="input-8" placeholder="Tech / Healthcare / Finance / Media..." autocorrect="off">
+      <button class="btn" data-step="8">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 09 Referral -->
+  <div class="slide" data-step="9">
+    <span class="step-label">09 /</span>
+    <h1>How did you <em>hear about us?</em></h1>
+    <div class="input-row" id="row-9">
+      <input type="text" id="input-9" placeholder="Google / LinkedIn / Word of mouth..." autocorrect="off">
+      <button class="btn" data-step="9">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 10 Goal -->
+  <div class="slide" data-step="10">
+    <span class="step-label">10 /</span>
+    <h1>What's your <em>main goal?</em></h1>
+    <div class="input-row" id="row-10">
+      <input type="text" id="input-10" placeholder="Scale my team / Automate workflows..." autocorrect="off">
+      <button class="btn" data-step="10">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue</p>
+  </div>
+
+  <!-- 11 Website -->
+  <div class="slide" data-step="11">
+    <span class="step-label">11 /</span>
+    <h1>What's your <em>website?</em></h1>
+    <div class="input-row" id="row-11">
+      <input type="url" id="input-11" placeholder="https://acme.com" autocomplete="url" autocorrect="off" autocapitalize="off">
+      <button class="btn" data-step="11">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue &nbsp;·&nbsp; Optional — leave blank to skip</p>
+  </div>
+
+  <!-- 12 Notes -->
+  <div class="slide" data-step="12">
+    <span class="step-label">12 /</span>
+    <h1>Anything else we should <em>know?</em></h1>
+    <div class="input-row" id="row-12">
+      <textarea id="input-12" placeholder="Any context, questions, or special requests..." rows="2"></textarea>
+      <button class="btn" data-step="12">OK <kbd>↵</kbd></button>
+    </div>
+    <p class="hint">Press <strong>Enter</strong> to continue &nbsp;·&nbsp; Optional — leave blank to skip</p>
+  </div>
+
+  <!-- 13 Review -->
+  <div class="slide review-slide" data-step="13">
+    <span class="step-label">Review /</span>
+    <h1>Look good? <em>Let's confirm.</em></h1>
+
+    <button class="back-btn" id="backBtn">← Edit answers</button>
+
+    <div class="review-grid" id="reviewGrid">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="review-actions">
+      <button class="submit-btn" id="submitBtn">Submit →</button>
+    </div>
+  </div>
+
+  <!-- 14 Confirmation -->
+  <div class="slide confirm-slide" data-step="14">
+    <span class="step-label">Done /</span>
+    <h1>You're in. <em>Welcome.</em></h1>
+    <p class="confirm-details">
+      We received your submission and will be in touch at<br>
+      <strong id="confirmEmail">—</strong>
+    </p>
+    <button class="restart-btn" id="restartBtn">↩ Start over</button>
+  </div>
+
+</div>
+
+<div class="watermark">NYC Tailblazers</div>
+
+<script>
+  const TOTAL_DATA_STEPS = 12;
+  const OPTIONAL_STEPS   = new Set([11, 12]); // website, notes
+
+  const LABELS = {
+     1: 'First name',
+     2: 'Last name',
+     3: 'Phone',
+     4: 'Business',
+     5: 'Email',
+     6: 'Role',
+     7: 'Company size',
+     8: 'Industry',
+     9: 'Referral',
+    10: 'Goal',
+    11: 'Website',
+    12: 'Notes',
+  };
+
+  const answers = {};
+  let current = 1;
+
+  const progressFill = document.getElementById('progressFill');
+  const stepCounter  = document.getElementById('stepCounter');
+
+  /* ── helpers ── */
+  function getSlide(step) { return document.querySelector(`.slide[data-step="${step}"]`); }
+  function getInput(step) { return document.getElementById(`input-${step}`); }
+  function getRow(step)   { return document.getElementById(`row-${step}`); }
+
+  function setProgress(step) {
+    if (step <= TOTAL_DATA_STEPS) {
+      const pct = ((step - 1) / TOTAL_DATA_STEPS) * 100;
+      progressFill.style.width = pct + '%';
+      stepCounter.textContent  = `${step} / ${TOTAL_DATA_STEPS}`;
+      stepCounter.style.opacity = '1';
+    } else if (step === TOTAL_DATA_STEPS + 1) {
+      // review
+      progressFill.style.width  = '100%';
+      stepCounter.style.opacity = '0';
+    } else {
+      // confirmation
+      progressFill.style.width  = '100%';
+      stepCounter.style.opacity = '0';
+    }
+  }
+
+  function triggerError(step) {
+    const row = getRow(step);
+    row.classList.remove('error');
+    void row.offsetWidth;
+    row.classList.add('error');
+    setTimeout(() => row.classList.remove('error'), 600);
+    getInput(step).focus();
+  }
+
+  function transitionTo(fromStep, toStep) {
+    const outSlide = getSlide(fromStep);
+    const inSlide  = getSlide(toStep);
+    if (!inSlide) return;
+
+    outSlide.classList.remove('active');
+    outSlide.classList.add('exit-up');
+
+    setTimeout(() => {
+      outSlide.classList.remove('exit-up');
+      inSlide.classList.add('active');
+
+      if (toStep <= TOTAL_DATA_STEPS) {
+        const inp = getInput(toStep);
+        if (inp) inp.focus();
+      } else if (toStep === TOTAL_DATA_STEPS + 1) {
+        renderReview();
+      } else if (toStep === TOTAL_DATA_STEPS + 2) {
+        showConfirmation();
+      }
+    }, 80);
+
+    current = toStep;
+    setProgress(toStep);
+  }
+
+  function advance(fromStep) {
+    const input = getInput(fromStep);
+    if (!input) return;
+    const val = input.value.trim();
+
+    if (!val && !OPTIONAL_STEPS.has(fromStep)) {
+      triggerError(fromStep);
+      return;
+    }
+
+    answers[fromStep] = val;
+    transitionTo(fromStep, fromStep + 1);
+  }
+
+  /* ── Review page ── */
+  function renderReview() {
+    const grid = document.getElementById('reviewGrid');
+    const entries = Object.entries(LABELS);
+
+    grid.innerHTML = entries.map(([step, label]) => {
+      const val = answers[+step];
+      const isEmpty = !val;
+      const isFullWidth = +step === 12; // notes spans full row
+      return `
+        <div class="review-cell${isFullWidth ? ' full-width' : ''}">
+          <span class="r-label">${label}</span>
+          <span class="r-value${isEmpty ? ' empty' : ''}">${isEmpty ? '—' : escHtml(val)}</span>
+        </div>`;
+    }).join('');
+  }
+
+  function showConfirmation() {
+    const emailEl = document.getElementById('confirmEmail');
+    emailEl.textContent = answers[5] || 'your email';
+  }
+
+  /* ── Event wiring ── */
+  document.querySelectorAll('.btn[data-step]').forEach(btn => {
+    btn.addEventListener('click', () => advance(+btn.dataset.step));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return;
+    if (current <= TOTAL_DATA_STEPS) {
+      // Let textarea handle Shift+Enter naturally; plain Enter advances
+      const inp = getInput(current);
+      if (inp && inp.tagName === 'TEXTAREA' && e.shiftKey) return;
+      e.preventDefault();
+      advance(current);
+    }
+  });
+
+  document.getElementById('submitBtn').addEventListener('click', () => {
+    transitionTo(TOTAL_DATA_STEPS + 1, TOTAL_DATA_STEPS + 2);
+  });
+
+  document.getElementById('backBtn').addEventListener('click', () => {
+    // Go back to step 1 (or could go to last data step — going to 1 lets user re-flow)
+    const reviewSlide = getSlide(TOTAL_DATA_STEPS + 1);
+    reviewSlide.classList.remove('active');
+    reviewSlide.classList.add('exit-up');
+    setTimeout(() => {
+      reviewSlide.classList.remove('exit-up');
+      const first = getSlide(1);
+      first.classList.add('active');
+      getInput(1).focus();
+    }, 80);
+    current = 1;
+    setProgress(1);
+  });
+
+  document.getElementById('restartBtn').addEventListener('click', () => {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    for (let s = 1; s <= TOTAL_DATA_STEPS; s++) {
+      const inp = getInput(s);
+      if (inp) inp.value = '';
+    }
+    const confirmSlide = getSlide(TOTAL_DATA_STEPS + 2);
+    confirmSlide.classList.remove('active');
+    confirmSlide.classList.add('exit-up');
+    setTimeout(() => {
+      confirmSlide.classList.remove('exit-up');
+      getSlide(1).classList.add('active');
+      getInput(1).focus();
+    }, 80);
+    current = 1;
+    setProgress(1);
+  });
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  /* ── Init ── */
+  setProgress(1);
+  getInput(1).focus();
+</script>
+</body>
+</html>

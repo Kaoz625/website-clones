@@ -1,0 +1,13 @@
+
+  [data-btn-rive-rotate="true"] .btn-rive-w {
+    transform: rotate(180deg)
+  }
+  [data-btn-rive-rotate="90"] .btn-rive-w {
+    transform: rotate(90deg)
+  }
+
+  [data-rive-btn-invert="true"] .btn-icon-w {
+    filter: invert(1);
+  }
+
+
