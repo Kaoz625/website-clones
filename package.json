@@ -62,12 +62,35 @@
     "check:install-hook": "tsx scripts/setup/install-pre-commit.ts",
     "bugbounty:headers": "tsx scripts/bugbounty/security-headers.ts",
     "bugbounty:redirects": "tsx scripts/bugbounty/open-redirect-scan.ts",
-    "bugbounty:xss": "tsx scripts/bugbounty/xss-probe.ts"
+    "bugbounty:xss": "tsx scripts/bugbounty/xss-probe.ts",
+    "bugbounty:info": "tsx scripts/bugbounty/info-disclosure.ts",
+    "bugbounty:secrets": "tsx scripts/bugbounty/js-secrets.ts",
+    "bugbounty:cors": "tsx scripts/bugbounty/cors-test.ts",
+    "agent:peak:lead": "tsx scripts/agents/peak-hvac/lead-capture-agent.ts",
+    "agent:peak:followup": "tsx scripts/agents/peak-hvac/followup-agent.ts",
+    "agent:peak:schedule": "tsx scripts/agents/peak-hvac/scheduling-agent.ts",
+    "agent:peak:chat": "tsx scripts/agents/peak-hvac/chat-widget-agent.ts",
+    "agent:peak:reputation": "tsx scripts/agents/peak-hvac/reputation-monitor.ts",
+    "agent:peak:noshow": "tsx scripts/agents/peak-hvac/no-show-recovery.ts",
+    "agent:peak:review": "tsx scripts/agents/peak-hvac/review-generation.ts",
+    "agent:peak:social": "tsx scripts/agents/peak-hvac/social-auto-poster.ts",
+    "agent:peak:reactivate": "tsx scripts/agents/peak-hvac/lead-reactivation.ts",
+    "agent:peak:compete": "tsx scripts/agents/peak-hvac/competitor-tracker.ts",
+    "agent:peak:slots": "tsx scripts/agents/peak-hvac/smart-slot-filler.ts",
+    "agent:clarity:chat": "tsx scripts/agents/clarity-coaching/chat-widget-agent.ts",
+    "agent:clarity:qualify": "tsx scripts/agents/clarity-coaching/qualifier-agent.ts",
+    "agent:clarity:nurture": "tsx scripts/agents/clarity-coaching/nurture-agent.ts",
+    "agent:clarity:proposal": "tsx scripts/agents/clarity-coaching/proposal-agent.ts",
+    "agent:luxe:book": "tsx scripts/agents/luxe-hair/booking-agent.ts",
+    "agent:luxe:chat": "tsx scripts/agents/luxe-hair/chat-widget-agent.ts",
+    "agent:luxe:reminder": "tsx scripts/agents/luxe-hair/reminder-agent.ts",
+    "agent:luxe:retention": "tsx scripts/agents/luxe-hair/retention-agent.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.104.1",
     "@types/better-sqlite3": "^7.6.13",
     "better-sqlite3": "^12.9.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "imapflow": "^1.3.2"
   }
 }
