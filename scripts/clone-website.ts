@@ -16,6 +16,7 @@
  */
 
 import { chromium, type Page } from 'playwright';
+import { launchHeadlessComet } from './lib/comet-headless.ts';
 import { mkdirSync, writeFileSync, existsSync } from 'fs';
 import { join, extname, basename, dirname } from 'path';
 import { createWriteStream } from 'fs';
@@ -46,7 +47,7 @@ console.log(`Output:  ${outDir}\n`);
 
 // ── Phase 1: Playwright — rendered HTML, CSS, assets ──────────────────────
 
-const browser = await chromium.launch({ headless: true });
+const { browser, close: closeBrowser } = await launchHeadlessComet({ chromium });
 const context = await browser.newContext({
   viewport: { width: 1440, height: 900 },
   userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -184,7 +185,7 @@ styleData.inlineStyles.forEach((css, i) => {
   writeFileSync(join(stylesDir, `inline-${i}.css`), css, 'utf-8');
 });
 
-await browser.close();
+await closeBrowser();
 
 // ── Download linked stylesheets and assets ─────────────────────────────────
 
@@ -232,7 +233,7 @@ console.log('[4/4] Analyzing layout components...');
 // Simple text extraction from the rendered page (already loaded)
 // We re-parse the HTML for semantic structure
 const semanticElements = await (async () => {
-  const b2 = await chromium.launch({ headless: true });
+  const { browser: b2, close: closeB2 } = await launchHeadlessComet({ chromium });
   const ctx2 = await b2.newContext({ viewport: { width: 1440, height: 900 } });
   const p2 = await ctx2.newPage();
   await p2.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
@@ -256,7 +257,7 @@ const semanticElements = await (async () => {
     return results;
   });
 
-  await b2.close();
+  await closeB2();
   return elements;
 })();
 

@@ -1,12 +1,16 @@
 import { chromium, type Browser, type Page } from 'playwright';
+import { launchHeadlessComet } from './comet-headless.ts';
 import { mkdirSync } from 'fs';
 import { dirname } from 'path';
 
 let browser: Browser | null = null;
+let stopComet: (() => Promise<void>) | null = null;
 
 async function getBrowser(): Promise<Browser> {
   if (!browser || !browser.isConnected()) {
-    browser = await chromium.launch({ headless: true });
+    const launched = await launchHeadlessComet({ chromium });
+    browser = launched.browser;
+    stopComet = launched.close;
   }
   return browser;
 }
@@ -57,7 +61,12 @@ export async function screenshotFile(
 
 export async function closeBrowser(): Promise<void> {
   if (browser) {
-    await browser.close();
+    if (stopComet) {
+      await stopComet();
+      stopComet = null;
+    } else {
+      await browser.close();
+    }
     browser = null;
   }
 }

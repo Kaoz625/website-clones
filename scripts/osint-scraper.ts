@@ -16,8 +16,8 @@
  */
 
 import { chromium, type Browser, type BrowserContext, type Page } from 'playwright';
+import { launchHeadlessComet } from './lib/comet-headless.ts';
 import { mkdirSync, writeFileSync } from 'fs';
-import { execSync } from 'child_process';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -48,28 +48,25 @@ if (!category && !person) {
 }
 
 // --- Browser setup ---
-const COMET_EXE = '/Applications/Comet.app/Contents/MacOS/Comet';
-const COMET_PROFILE = `${process.env.HOME}/Library/Application Support/Comet/Default`;
-const TEMP_PROFILE = `/tmp/comet-osint-${process.pid}`;
 const CDP_URL = 'http://127.0.0.1:9222';
 
 let browser: Browser | undefined;
 let context: BrowserContext;
-let ownedContext = false;
+// Was chromium.launchPersistentContext(TEMP_PROFILE, { executablePath: COMET_EXE,
+// headless: true, ... }) — the exact pattern the house doctrine documents as
+// hanging/flaky against Comet (Playwright's launch()-family passes a bare
+// --headless, which Comet ignores; see comet-headless.ts header). Neither
+// business/OSINT search mode needs a logged-in session, so the rsync'd
+// real-profile copy this used to make was unnecessary complexity on top of a
+// broken launch — spawn+poll+connectOverCDP replaces both.
+let stopComet: (() => Promise<void>) | null = null;
 
 if (headless) {
-  console.error('Mode: headless Comet (profile copy)');
-  mkdirSync(TEMP_PROFILE, { recursive: true });
-  try {
-    execSync(`rsync -a --exclude='*.lock' --exclude='SingletonLock' "${COMET_PROFILE}/" "${TEMP_PROFILE}/"`, { stdio: 'pipe' });
-  } catch { /* best-effort */ }
-
-  context = await chromium.launchPersistentContext(TEMP_PROFILE, {
-    executablePath: COMET_EXE,
-    headless: true,
-    args: ['--no-first-run', '--disable-sync', '--no-default-browser-check'],
-  });
-  ownedContext = true;
+  console.error('Mode: headless Comet (scratch profile)');
+  const launched = await launchHeadlessComet({ chromium });
+  browser = launched.browser;
+  context = launched.context;
+  stopComet = launched.close;
 } else {
   console.error('Mode: headed Comet via CDP');
   try {
@@ -310,10 +307,7 @@ for (const supQuery of queries.supplemental) {
 }
 
 await page.close();
-if (ownedContext) {
-  await context.close();
-  try { execSync(`rm -rf "${TEMP_PROFILE}"`, { stdio: 'pipe' }); } catch { /* best-effort */ }
-}
+if (stopComet) await stopComet();
 
 // --- Save output ---
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');

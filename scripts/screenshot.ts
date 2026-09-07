@@ -1,4 +1,5 @@
 import { chromium, devices } from 'playwright';
+import { launchHeadlessComet } from './lib/comet-headless.ts';
 import { mkdirSync } from 'fs';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
@@ -19,7 +20,7 @@ const domain = new URL(url).hostname.replace(/\./g, '_');
 const filename = `${timestamp}-${domain}.png`;
 const outputPath = join(screenshotsDir, filename);
 
-const browser = await chromium.launch({ headless: true });
+const { browser, close } = await launchHeadlessComet({ chromium });
 const context = deviceFlag
   ? await browser.newContext(devices[deviceFlag as keyof typeof devices])
   : await browser.newContext();
@@ -27,6 +28,6 @@ const context = deviceFlag
 const page = await context.newPage();
 await page.goto(url, { waitUntil: 'networkidle' });
 await page.screenshot({ path: outputPath, fullPage });
-await browser.close();
+await close();
 
 console.log(outputPath);

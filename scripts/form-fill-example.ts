@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
+import { launchHeadlessComet } from './lib/comet-headless.ts';
 
-const browser = await chromium.launch({ headless: true });
+const { browser, close } = await launchHeadlessComet({ chromium });
 const page = await browser.newPage();
 
 await page.goto('https://the-internet.herokuapp.com/login');
@@ -24,4 +25,4 @@ await page.waitForSelector('.flash.error', { timeout: 10000 });
 const errorMsg = await page.locator('.flash.error').textContent();
 console.log('✓ Invalid login correctly rejected:', errorMsg?.trim());
 
-await browser.close();
+await close();

@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import { launchHeadlessComet } from '../lib/comet-headless.ts';
 import { parseTarget, saveFindings, timestamp } from './utils.ts';
 
 const REQUIRED_HEADERS: Record<string, string> = {
@@ -36,7 +37,7 @@ interface ScanResult {
 }
 
 const target = parseTarget();
-const browser = await chromium.launch({ headless: true });
+const { browser, close } = await launchHeadlessComet({ chromium });
 const page = await browser.newPage();
 
 console.log(`\n[*] Security Headers Audit: ${target}\n`);
@@ -46,7 +47,7 @@ try {
   response = await page.goto(target, { waitUntil: 'domcontentloaded', timeout: 30000 });
 } catch (e) {
   console.error(`[!] Failed to load ${target}: ${e}`);
-  await browser.close();
+  await close();
   process.exit(1);
 }
 
@@ -156,4 +157,4 @@ if (eligible > 0) {
   });
 }
 
-await browser.close();
+await close();

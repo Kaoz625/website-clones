@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
+import { launchHeadlessComet } from './lib/comet-headless.ts';
 
-const browser = await chromium.launch({ headless: true });
+const { browser, close } = await launchHeadlessComet({ chromium });
 const page = await browser.newPage();
 
 await page.goto('https://news.ycombinator.com', { waitUntil: 'domcontentloaded' });
@@ -21,6 +22,6 @@ const stories = await page.evaluate(() => {
   });
 });
 
-await browser.close();
+await close();
 
 console.log(JSON.stringify(stories, null, 2));

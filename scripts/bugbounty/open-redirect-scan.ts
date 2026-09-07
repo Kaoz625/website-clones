@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import { launchHeadlessComet } from '../lib/comet-headless.ts';
 import { parseTarget, saveFindings, saveScreenshot, REDIRECT_PARAMS, timestamp } from './utils.ts';
 
 const EVIL_HOST = 'evil-redirect-canary.com';
@@ -16,7 +17,7 @@ interface RedirectFinding {
 const target = parseTarget();
 const base = new URL(target);
 
-const browser = await chromium.launch({ headless: true });
+const { browser, close } = await launchHeadlessComet({ chromium });
 const context = await browser.newContext({ ignoreHTTPSErrors: true });
 const page = await context.newPage();
 
@@ -99,7 +100,12 @@ for (const { url, param } of candidateUrls) {
     await scanPage.goto(testUrl, { waitUntil: 'domcontentloaded', timeout: 10000 }).catch(() => {});
 
     const finalUrl = scanPage.url();
-    const confirmed = finalUrl.includes(EVIL_HOST) || redirectedTo.includes(EVIL_HOST);
+    // True open redirect: final hostname must actually BE the evil host (not just contain it as a param value)
+    let finalHostname = '';
+    try { finalHostname = new URL(finalUrl).hostname; } catch { /* ignore */ }
+    let redirectHostname = '';
+    try { redirectHostname = redirectedTo ? new URL(redirectedTo).hostname : ''; } catch { /* ignore */ }
+    const confirmed = finalHostname === EVIL_HOST || redirectHostname === EVIL_HOST;
 
     if (confirmed) {
       const shot = await saveScreenshot(scanPage, target, `redirect-${param}`);
@@ -107,9 +113,9 @@ for (const { url, param } of candidateUrls) {
       console.log(`  [VULN] Open redirect via ?${param}= on ${url}`);
       console.log(`         Redirected to: ${finalUrl}`);
       console.log(`         Screenshot: ${shot}`);
-    } else if (redirectedTo) {
+    } else if (redirectedTo && redirectHostname && redirectHostname !== base.hostname) {
       findings.push({ original_url: url, param, payload: EVIL_URL, redirected_to: redirectedTo, confirmed: false });
-      console.log(`  [INFO] Redirect detected but not to evil host — ?${param}= → ${redirectedTo}`);
+      console.log(`  [INFO] Redirect to external host — ?${param}= → ${redirectedTo}`);
     }
 
     await scanPage.close();
@@ -131,4 +137,4 @@ console.log(`  Params tested     : ${candidateUrls.length}`);
 console.log(`  Confirmed vulns   : ${findings.filter(f => f.confirmed).length}`);
 console.log(`  Saved to          : ${outFile}\n`);
 
-await browser.close();
+await close();

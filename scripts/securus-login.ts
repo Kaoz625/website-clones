@@ -9,6 +9,7 @@
  */
 
 import { chromium, type Page, type BrowserContext } from 'playwright';
+import { launchHeadlessComet, connectVisibleComet } from './lib/comet-headless.ts';
 import { mkdirSync } from 'fs';
 import { execSync } from 'child_process';
 import { join, dirname } from 'path';
@@ -192,14 +193,18 @@ async function headedSession(): Promise<SecurusSession> {
 }
 
 /**
- * Headless mode: use Playwright's bundled Chromium with fresh credential login.
- * Avoids Comet's internal startup pages (e.g. chrome://perplexity-onboarding/)
- * that crash launchPersistentContext. Credentials come from SECURUS_USER/PASS env.
+ * Headless mode: headless Comet (scratch profile) with fresh credential
+ * login. Was Playwright's bundled Chromium — banned by house rule. Comet's
+ * internal startup pages (e.g. chrome://perplexity-onboarding/) that used to
+ * crash launchPersistentContext do not come up here because we spawn with
+ * `--headless=new` and connect over CDP instead of using launch()/
+ * launchPersistentContext(); see scripts/lib/comet-headless.ts. Credentials
+ * come from SECURUS_USER/PASS env.
  */
 async function headlessSession(): Promise<SecurusSession> {
-  console.error('[securus-login] Mode: headless Chromium (fresh login)');
+  console.error('[securus-login] Mode: headless Comet (fresh login)');
 
-  const browser = await chromium.launch({ headless: true });
+  const { browser, close } = await launchHeadlessComet({ chromium });
   const context = await browser.newContext({
     userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
   });
@@ -218,21 +223,21 @@ async function headlessSession(): Promise<SecurusSession> {
   return {
     page,
     context,
-    cleanup: async () => { await browser.close(); },
+    cleanup: async () => { await close(); },
   };
 }
 
 /**
- * Launched headed mode: opens a NEW visible Chromium window automatically.
- * No Comet required. User can watch every step happen in real time.
+ * Launched headed mode: used to open a NEW visible Chromium window
+ * automatically — exactly what ~/CLAUDE.md forbids ("Anything that touches a
+ * real website goes through Markus's Comet browser"). Attaches to his
+ * already-running, visible Comet instead so he watches the same browser he
+ * actually uses. Run ~/bin/comet-cdp.sh first if this can't connect.
  */
 async function launchedSession(): Promise<SecurusSession> {
-  console.error('[securus-login] Mode: headed Chromium (new visible window)');
+  console.error('[securus-login] Mode: visible Comet (watch it happen)');
 
-  const browser = await chromium.launch({
-    headless: false,
-    slowMo: 600,
-  });
+  const browser = await connectVisibleComet(chromium);
   const context = await browser.newContext({
     userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     viewport: { width: 1280, height: 900 },
@@ -252,15 +257,17 @@ async function launchedSession(): Promise<SecurusSession> {
   return {
     page,
     context,
-    cleanup: async () => { await browser.close(); },
+    // Never call browser.close() on a CDP connection to his visible Comet —
+    // that would kill his real window. Just close the context/tab we opened.
+    cleanup: async () => { await context.close(); },
   };
 }
 
 /**
  * Get a fully logged-in Securus page.
  *
- * @param opts.mode  'launch' (default) — new visible browser window, no Comet needed
- *                   'headless'         — invisible Chromium
+ * @param opts.mode  'launch' (default) — attaches to Markus's visible, running Comet
+ *                   'headless'         — invisible headless Comet (scratch profile)
  *                   'comet'            — CDP attach to running Comet (port 9222)
  */
 export async function getSecurusPage(opts?: { headless?: boolean; mode?: 'launch' | 'headless' | 'comet' }): Promise<SecurusSession> {

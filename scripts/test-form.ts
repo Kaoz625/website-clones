@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import { connectVisibleComet } from './lib/comet-headless.ts';
 
 const BASE = 'http://localhost:3030/form/';
 
@@ -23,8 +24,13 @@ async function pause(ms = 600) {
   await new Promise(r => setTimeout(r, ms));
 }
 
-const browser = await chromium.launch({ headless: false, slowMo: 80 });
-const page = await browser.newPage();
+// Was: chromium.launch({ headless: false, slowMo: 80 }) — a fresh, visible
+// Chromium window. House rule: anything Markus can watch happen goes through
+// his own Comet, not a second, different browser. Attach to his running,
+// visible Comet instead (run ~/bin/comet-cdp.sh first if this can't connect).
+const browser = await connectVisibleComet(chromium);
+const context = await browser.newContext();
+const page = await context.newPage();
 await page.setViewportSize({ width: 1280, height: 800 });
 
 console.log('\n── Navigating to form ──');
@@ -157,4 +163,6 @@ console.log('═'.repeat(50) + '\n');
 
 // Leave browser open for 4 seconds so the user can see the final state
 await pause(4000);
-await browser.close();
+await context.close();
+// Never call browser.close() on a CDP connection to his visible Comet — that
+// would kill his real window.

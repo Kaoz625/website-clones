@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import { launchHeadlessComet } from '../lib/comet-headless.ts';
 import { parseTarget, saveFindings, saveScreenshot, XSS_PAYLOADS, timestamp } from './utils.ts';
 
 interface XssFinding {
@@ -13,7 +14,7 @@ interface XssFinding {
 const target = parseTarget();
 const base = new URL(target);
 
-const browser = await chromium.launch({ headless: true });
+const { browser, close } = await launchHeadlessComet({ chromium });
 const context = await browser.newContext({ ignoreHTTPSErrors: true });
 
 console.log(`\n[*] XSS Probe Scanner: ${target}\n`);
@@ -166,4 +167,4 @@ console.log(`  Confirmed XSS      : ${findings.filter(f => f.confirmed).length}`
 console.log(`  Reflected (verify) : ${findings.filter(f => !f.confirmed).length}`);
 console.log(`  Saved to           : ${outFile}\n`);
 
-await browser.close();
+await close();

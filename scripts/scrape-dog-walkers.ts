@@ -1,6 +1,6 @@
 import { chromium, Browser, BrowserContext } from 'playwright';
+import { launchHeadlessComet } from './lib/comet-headless.ts';
 import { mkdirSync, writeFileSync } from 'fs';
-import { execSync } from 'child_process';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,28 +12,25 @@ const args = process.argv.slice(2);
 const query = args.find(a => !a.startsWith('--')) ?? 'dog walkers near me phone number';
 const headless = args.includes('--headless');
 
-const COMET_EXE = '/Applications/Comet.app/Contents/MacOS/Comet';
-const COMET_PROFILE = `${process.env.HOME}/Library/Application Support/Comet/Default`;
-const TEMP_PROFILE = '/tmp/comet-scrape-profile';
 const CDP_URL = 'http://127.0.0.1:9222';
 
 let browser: Browser | undefined;
 let context: BrowserContext;
-let ownedBrowser = false;
+// Was chromium.launchPersistentContext(TEMP_PROFILE, { executablePath: COMET_EXE,
+// headless: true, ... }) — the exact pattern the house doctrine documents as
+// hanging/flaky against Comet (Playwright's launch()-family passes a bare
+// --headless, which Comet ignores; see comet-headless.ts header). Google
+// search scraping needs no logged-in session, so the rsync'd real-profile copy
+// this used to make was unnecessary complexity on top of a broken launch —
+// spawn+poll+connectOverCDP replaces both.
+let stopComet: (() => Promise<void>) | null = null;
 
 if (headless) {
-  console.error('Mode: headless Comet (profile copy)');
-  mkdirSync(TEMP_PROFILE, { recursive: true });
-  try {
-    execSync(`rsync -a --exclude='*.lock' --exclude='SingletonLock' "${COMET_PROFILE}/" "${TEMP_PROFILE}/"`);
-  } catch { /* best-effort */ }
-
-  context = await chromium.launchPersistentContext(TEMP_PROFILE, {
-    executablePath: COMET_EXE,
-    headless: true,
-    args: ['--no-first-run', '--disable-sync', '--no-default-browser-check'],
-  });
-  ownedBrowser = true;
+  console.error('Mode: headless Comet (scratch profile)');
+  const launched = await launchHeadlessComet({ chromium });
+  browser = launched.browser;
+  context = launched.context;
+  stopComet = launched.close;
 } else {
   console.error('Mode: headed Comet via CDP');
   try {
@@ -95,7 +92,7 @@ const results = await page.evaluate(`(() => {
 })()`) as Array<{ name: string; phone: string }>;
 
 await page.close();
-if (ownedBrowser) await context.close();
+if (stopComet) await stopComet();
 // Never call browser.close() on a CDP connection — that kills the live Comet window
 
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
